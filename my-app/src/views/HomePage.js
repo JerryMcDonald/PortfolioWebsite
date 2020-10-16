@@ -47,7 +47,7 @@ export default function HomePage(props) {
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Your Story Starts With Us.</h1>
                  <h4>
-             This will be my home page!
+             This will be my home page! I am currently working on makeing this my own page there is alot of work to do!
               </h4>
               <br />
               <Button
