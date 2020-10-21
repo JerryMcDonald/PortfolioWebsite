@@ -5,15 +5,15 @@ import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 
 // core components
-import Header from "src/components/Header/Header.js";
-import Footer from "src/components/Footer/Footer.js";
-import GridContainer from "src/components/Grid/GridContainer.js";
-import GridItem from "src/components/Grid/GridItem.js";
-import Button from "src/components/CustomButtons/Button.js";
-import HeaderLinks from "src/components/Header/HeaderLinks.js";
-import Parallax from "src/components/Parallax/Parallax.js";
+import Header from "../../components/Header/Header.js";
+import Footer from "../../components/Footer/Footer.js";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
+import Button from "../../components/CustomButtons/Button.js";
+import HeaderLinks from "../../components/Header/HeaderLinks.js";
+import Parallax from "../../components/Parallax/Parallax.js";
 
-import styles from "src/assets/jss/material-kit-react/views/landingPage.js";
+import styles from "../../assets/jss/material-kit-react/views/landingPage.js"
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
@@ -41,7 +41,7 @@ export default function HomePage(props) {
         }}
         {...rest}
       />
-      <Parallax filter image={require("src/assets/img/landing-bg.jpg")}>
+      <Parallax filter image={require("../../assets/img/landing-bg.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
