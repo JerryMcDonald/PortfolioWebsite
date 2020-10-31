@@ -5,15 +5,15 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "4.9.1",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
     "classnames": "2.2.6",
     "history": "4.10.1",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
     "nouislider": "14.5.0",
     "prop-types": "15.7.2",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-datetime": "2.16.3",
     "react-dom": "^16.13.1",
@@ -43,12 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.21.3",
-    "eslint-plugin-standard": "^4.0.1"
-  }
+  "devDependencies": {}
 }
