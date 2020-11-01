@@ -13,7 +13,7 @@ import Button from "../../components/CustomButtons/Button.js";
 import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
-import styles from "../../assets/jss/material-kit-react/views/landingPage.js"
+import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import ProductSection from "./Sections/ProductSection.js";
@@ -32,25 +32,24 @@ export default function HomePage(props) {
       <Header
         color="transparent"
         routes={dashboardRoutes}
-        brand="Material Kit React"
+        brand="Jerry McDonald"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
           height: 400,
-          color: "white"
+          color: "white",
         }}
         {...rest}
       />
-      <Parallax filter image={require("../../assets/img/landing-bg.jpg")}>
+      <Parallax filter image={require("../../assets/img/bg3.jpg")}>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Your Story Starts With Us.</h1>
-                 <h4>
-             This will be my home page! I am currently working on makeing this my own page there is alot of work to do!
-              </h4>
+              <h1 className={classes.title}>Hi, I'm Jerry</h1>
+              <h1>I am going to leave this blank for now...</h1>
               <br />
-              <Button
+              {/* <Button
+              
                 color="danger"
                 size="lg"
                 href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
@@ -59,7 +58,7 @@ export default function HomePage(props) {
               >
                 <i className="fas fa-play" />
                 Watch video
-              </Button>
+              </Button> */}
             </GridItem>
           </GridContainer>
         </div>
@@ -67,8 +66,8 @@ export default function HomePage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <ProductSection />
-          <TeamSection />
-          <WorkSection />
+          {/* <TeamSection /> */}
+          {/* <WorkSection /> */}
         </div>
       </div>
       <Footer />
