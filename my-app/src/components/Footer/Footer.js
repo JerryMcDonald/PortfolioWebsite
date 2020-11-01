@@ -37,10 +37,9 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
-              </a>
+Insert Lined-in, Github, and Dev-to links              </a>
             </ListItem>
-            <ListItem className={classes.inlineBlock}>
+            {/* <ListItem className={classes.inlineBlock}>
               <a
                 href="https://www.creative-tim.com/presentation?ref=mkr-footer"
                 className={classes.block}
@@ -66,10 +65,10 @@ export default function Footer(props) {
               >
                 Licenses
               </a>
-            </ListItem>
+            </ListItem> */}
           </List>
         </div>
-        <div className={classes.right}>
+        {/* <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} , made with{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
@@ -80,6 +79,9 @@ export default function Footer(props) {
             Creative Tim
           </a>{" "}
           for a better web.
+        </div> */}
+        <div className={classes.right}>
+          &copy; {1900 + new Date().getYear()} , Jerry McDonald
         </div>
       </div>
     </footer>
