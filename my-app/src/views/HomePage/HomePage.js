@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -16,7 +16,8 @@ import Parallax from "../../components/Parallax/Parallax.js";
 import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.js";
+import WebpageShowcase from "./Sections/WebpageShowcase.js";
+import Resume from "./Sections/Resume.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 
@@ -25,6 +26,7 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function HomePage(props) {
+  const [clickResume, setClickResume] = useState(false);
   const classes = useStyles();
   const { ...rest } = props;
   return (
@@ -65,7 +67,7 @@ export default function HomePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <ProductSection />
+            {clickResume? <Resume /> : <WebpageShowcase />}
           {/* <TeamSection /> */}
           {/* <WorkSection /> */}
         </div>
