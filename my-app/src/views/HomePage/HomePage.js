@@ -29,13 +29,16 @@ export default function HomePage(props) {
   const [clickResume, setClickResume] = useState(false);
   const classes = useStyles();
   const { ...rest } = props;
+  const resumeClick = () => {
+    setClickResume(!clickResume);
+  }
   return (
     <div>
       <Header
         color="transparent"
         routes={dashboardRoutes}
         brand="Jerry McDonald"
-        rightLinks={<HeaderLinks />}
+        rightLinks={<HeaderLinks resumeClick={resumeClick} />}
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -48,7 +51,7 @@ export default function HomePage(props) {
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={6}>
               <h1 className={classes.title}>Hi, I'm Jerry</h1>
-              <h1>I am going to leave this blank for now...</h1>
+              <h1>Scroll Down to see some of my work!</h1>
               <br />
               {/* <Button
               
