@@ -29,7 +29,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
-          buttonText="Contact"
+          buttonText="dropdown"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -56,15 +56,35 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <CloudDownload className={classes.icons} /> Resume
+           about
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
+        <Button
+          href="mailto:jmcdonald.dad.dev@gmail.com"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+           Contact
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+           Resume
+        </Button>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
+        <Tooltip title="Delete">
           <IconButton aria-label="Delete">
             <DeleteIcon />
           </IconButton>
-        </Tooltip>*/}
+        </Tooltip>
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"
@@ -114,7 +134,7 @@ export default function HeaderLinks(props) {
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }
