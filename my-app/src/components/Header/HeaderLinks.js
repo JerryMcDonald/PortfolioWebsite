@@ -24,6 +24,11 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+
+  const message = () => {
+    alert('Hello!');
+  }
+
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -61,7 +66,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="mailto:jmcdonald.dad.dev@gmail.com"
+          // href="mailto:jmcdonald.dad.dev@gmail.com"
+          href={"/contact-page"}
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -71,7 +77,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          // href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          onClick={props.resumeClick}
           color="transparent"
           target="_blank"
           className={classes.navLink}
