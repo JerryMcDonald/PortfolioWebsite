@@ -50,9 +50,11 @@ export default function HomePage(props) {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Hi, I'm Jerry</h1>
-              <h1>Scroll Down to see some of my work!</h1>
-              <br />
+              <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>Hi <span role="img" aria-label="sheep">👋</span> I'm Jerry </p> 
+
+              <p style={{ paddingLeft: 10, fontSize: 35 }}> I love to create, design, and learn! </p>
+              {/* <h1>This is my portfolio</h1> */}
+              
               {/* <Button
               
                 color="danger"
