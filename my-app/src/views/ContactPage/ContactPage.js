@@ -21,7 +21,7 @@ import CustomInput from "../../components/CustomInput/CustomInput.js";
 
 import styles from "../../assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "../../assets/img/bg7.jpg";
+import image from "../../assets/img/bg3.jpg";
 
 
 const useStyles = makeStyles(styles);
@@ -38,7 +38,7 @@ export default function ContactPage(props) {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit React"
+        brand="Jerry McDonald"
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -55,7 +55,7 @@ export default function ContactPage(props) {
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
                 <form className={classes.form}>
-                  <CardHeader color="primary" className={classes.cardHeader}>
+                  {/* <CardHeader color="primary" className={classes.cardHeader}>
                     <h4>Login</h4>
                     <div className={classes.socialLine}>
                       <Button
@@ -86,8 +86,8 @@ export default function ContactPage(props) {
                         <i className={"fab fa-google-plus-g"} />
                       </Button>
                     </div>
-                  </CardHeader>
-                  <p className={classes.divider}>Or Be Classical</p>
+                  </CardHeader> */}
+                  <p style={{ fontSize: 35 }} className={classes.divider}><span role="img" aria-label="sheep">👋</span> </p>
                   <CardBody>
                     <CustomInput
                       labelText="First Name..."
