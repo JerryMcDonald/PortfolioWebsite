@@ -69,7 +69,7 @@ export default function HeaderLinks(props) {
           // href="mailto:jmcdonald.dad.dev@gmail.com"
           href={"/contact-page"}
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
         >
            Contact
