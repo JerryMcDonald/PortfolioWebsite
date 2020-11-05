@@ -31,7 +31,7 @@ export default function HomePage(props) {
   const { ...rest } = props;
   const resumeClick = () => {
     setClickResume(!clickResume);
-  }
+  };
   return (
     <div>
       <Header
@@ -50,11 +50,20 @@ export default function HomePage(props) {
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={6}>
-              <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>Hi <span role="img" aria-label="sheep">👋</span> I'm Jerry </p> 
+              <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>
+                Hi{" "}
+                <span role="img" aria-label="sheep">
+                  👋
+                </span>{" "}
+                I'm Jerry{" "}
+              </p>
 
-              <p style={{ paddingLeft: 10, fontSize: 35 }}> I love to create, design, and learn! </p>
+              <p style={{ paddingLeft: 10, fontSize: 25 }}>
+                {" "}
+                Mr. Positive || Problem Solver || Coder || Dad{" "}
+              </p>
               {/* <h1>This is my portfolio</h1> */}
-              
+
               {/* <Button
               
                 color="danger"
@@ -72,7 +81,7 @@ export default function HomePage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-            {clickResume? <Resume /> : <WebpageShowcase />}
+          {clickResume ? <Resume /> : <WebpageShowcase />}
           {/* <TeamSection /> */}
           {/* <WorkSection /> */}
         </div>
