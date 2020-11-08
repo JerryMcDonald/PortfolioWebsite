@@ -50,13 +50,25 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href={"/contact-page"}
+          // href={"/contact-page"}
+          onClick={props.contactClick}
           color="transparent"
           // we do not want contact to open in a new tab
           // target="_blank"
           className={classes.navLink}
         >
            Contact
+        </Button>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href={"/contact-page"}
+          color="transparent"
+          // we do not want contact to open in a new tab
+          // target="_blank"
+          className={classes.navLink}
+        >
+           Contact2
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
