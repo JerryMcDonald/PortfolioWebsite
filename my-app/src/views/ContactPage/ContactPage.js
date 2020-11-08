@@ -29,6 +29,9 @@ const useStyles = makeStyles(styles);
 export default function ContactPage(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   const [classicModal, setClassicModal] = React.useState(false);
+  const [fromContactPage, setFromContactPage] = React.useState(true);
+
+  
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
