@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
-import InfoArea from "../../../components/InfoArea/InfoArea.js";
+// import InfoArea from "../../../components/InfoArea/InfoArea.js";
 
 import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
@@ -18,9 +18,7 @@ export default function Contact() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>About</h2>
-          <h5 className={classes.description}>
-            This is my about page
-          </h5>
+          <h5 className={classes.description}>This is my about page</h5>
         </GridItem>
       </GridContainer>
     </div>
