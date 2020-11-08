@@ -30,7 +30,8 @@ export default function HeaderLinks(props) {
     <List className={classes.list}>
         <ListItem className={classes.listItem}>
         <Button
-          href={"/"}
+          // href={"/"}
+          onClick={props.showcaseClick}
           color="transparent"
           // target="_blank"
           className={classes.navLink}
@@ -40,7 +41,8 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          // href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          onClick={props.aboutClick}
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -60,7 +62,7 @@ export default function HeaderLinks(props) {
            Contact
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           href={"/contact-page"}
           color="transparent"
@@ -70,7 +72,7 @@ export default function HeaderLinks(props) {
         >
            Contact2
         </Button>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
           href={resume}
