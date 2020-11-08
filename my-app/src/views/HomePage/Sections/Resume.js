@@ -15,14 +15,14 @@ export default function WebpageShowcase() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-    <GridContainer justify="center">
-      <GridItem xs={12} sm={12} md={8}>
-        <h2 className={classes.title}>Resume</h2>
-        <h5 className={classes.description}>
-          I will try to put my resume here
-        </h5>
-      </GridItem>
-    </GridContainer>
-  </div>
-);
+      <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={8}>
+          <h2 className={classes.title}>Resume</h2>
+          <h5 className={classes.description}>
+            I will try to put my resume here
+          </h5>
+        </GridItem>
+      </GridContainer>
+    </div>
+  );
 }
