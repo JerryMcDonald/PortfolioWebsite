@@ -9,7 +9,7 @@ import Header from "../../components/Header/Header.js";
 import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import Button from "../../components/CustomButtons/Button.js";
+// import Button from "../../components/CustomButtons/Button.js";
 import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
@@ -18,8 +18,8 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
 import Resume from "./Sections/Resume.js";
-import TeamSection from "./Sections/TeamSection.js";
-import WorkSection from "./Sections/WorkSection.js";
+// import TeamSection from "./Sections/TeamSection.js";
+// import WorkSection from "./Sections/WorkSection.js";
 
 const dashboardRoutes = [];
 
@@ -58,35 +58,22 @@ export default function HomePage(props) {
                 I'm Jerry{" "}
               </p>
 
-              <p style={{ paddingLeft: 10, fontSize: 25 }}>
+              <p style={{ paddingLeft: 94, fontSize: 25 }}>
                 {" "}
-                Mr. Positive || Problem Solver || Coder || Dad{" "}
+                Problem Solver || Coder || Dad{" "}
               </p>
-              {/* <h1>This is my portfolio</h1> */}
-
-              {/* <Button
-              
-                color="danger"
-                size="lg"
-                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fas fa-play" />
-                Watch video
-              </Button> */}
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          {clickResume ? <Resume /> : <WebpageShowcase />}
+      {/* <div className={classNames(classes.main, classes.mainRaised)}> */}
+        {/* <div className={classes.container}> */}
+          {/* {clickResume ? <Resume /> : <WebpageShowcase />} */}
           {/* <TeamSection /> */}
           {/* <WorkSection /> */}
-        </div>
-      </div>
-      <Footer />
+        {/* </div> */}
+      {/* </div> */}
+      {/* <Footer /> */}
     </div>
   );
 }
