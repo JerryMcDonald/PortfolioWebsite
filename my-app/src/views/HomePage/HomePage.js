@@ -18,6 +18,7 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 // Sections for this page
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
 import Resume from "./Sections/Resume.js";
+import Contact from "./Sections/Contact.js";
 // import TeamSection from "./Sections/TeamSection.js";
 // import WorkSection from "./Sections/WorkSection.js";
 
@@ -26,19 +27,24 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function HomePage(props) {
-  const [clickResume, setClickResume] = useState(false);
+  const [clickContact, setClickContact] = useState(false);
   const classes = useStyles();
   const { ...rest } = props;
-  const resumeClick = () => {
-    setClickResume(!clickResume);
-  };
+
+  // const resumeClick = () => {
+  //   setClickResume(!clickResume);
+  // };
+
+  const contactClick = () => {
+    setClickContact(!clickContact);
+  }
   return (
     <div>
       <Header
         color="transparent"
         routes={dashboardRoutes}
         brand="Jerry McDonald"
-        rightLinks={<HeaderLinks resumeClick={resumeClick} />}
+        rightLinks={<HeaderLinks contactClick={contactClick} />}
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -66,13 +72,13 @@ export default function HomePage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      {/* <div className={classNames(classes.main, classes.mainRaised)}> */}
-        {/* <div className={classes.container}> */}
-          {/* {clickResume ? <Resume /> : <WebpageShowcase />} */}
+      <div className={classNames(classes.main, classes.mainRaised)}> */}
+        <div className={classes.container}>
+          {clickContact ? <Contact /> : <WebpageShowcase />}
           {/* <TeamSection /> */}
           {/* <WorkSection /> */}
-        {/* </div> */}
-      {/* </div> */}
+        </div>
+      </div>
       {/* <Footer /> */}
     </div>
   );
