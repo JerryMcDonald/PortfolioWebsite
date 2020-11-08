@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // core components
 import Header from "../../components/Header/Header.js";
-import Footer from "../../components/Footer/Footer.js";
+// import Footer from "../../components/Footer/Footer.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 // import Button from "../../components/CustomButtons/Button.js";
@@ -17,7 +17,7 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
-import Resume from "./Sections/Resume.js";
+// import Resume from "./Sections/Resume.js";
 import Contact from "./Sections/Contact.js";
 import About from "./Sections/About.js";
 
@@ -40,19 +40,19 @@ export default function HomePage(props) {
     setClickShowcase(true);
     setClickAbout(false);
     setClickContact(false);
-  }
+  };
 
   const aboutClick = () => {
     setClickAbout(true);
     setClickContact(false);
     setClickShowcase(false);
-  }
+  };
 
   const contactClick = () => {
     setClickContact(true);
     setClickAbout(false);
     setClickShowcase(false);
-  }
+  };
 
   return (
     <div>
@@ -60,7 +60,13 @@ export default function HomePage(props) {
         color="transparent"
         routes={dashboardRoutes}
         brand="Jerry McDonald"
-        rightLinks={<HeaderLinks showcaseClick={showcaseClick} aboutClick={aboutClick} contactClick={contactClick} />}
+        rightLinks={
+          <HeaderLinks
+            showcaseClick={showcaseClick}
+            aboutClick={aboutClick}
+            contactClick={contactClick}
+          />
+        }
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -88,12 +94,11 @@ export default function HomePage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}> 
+      <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-
-          {clickShowcase ? <WebpageShowcase /> :null}
-          {clickAbout ? <About /> :null}
-          {clickContact ? <Contact /> :null}
+          {clickShowcase ? <WebpageShowcase /> : null}
+          {clickAbout ? <About /> : null}
+          {clickContact ? <Contact /> : null}
 
           {/* {showCard} */}
           {/* <WebpageShowcase /> */}
