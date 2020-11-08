@@ -74,9 +74,11 @@ export default function HomePage(props) {
         }}
         {...rest}
       />
+      { !clickContact ?
+      <div>
       <Parallax filter image={require("../../assets/img/bg3.jpg")}>
         <div className={classes.container}>
-          <GridContainer justify="center">
+         <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={6}>
               <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>
                 Hi{" "}
@@ -98,7 +100,7 @@ export default function HomePage(props) {
         <div className={classes.container}>
           {clickShowcase ? <WebpageShowcase /> : null}
           {clickAbout ? <About /> : null}
-          {clickContact ? <Contact /> : null}
+          {/* {clickContact ? <Contact /> : null} */}
 
           {/* {showCard} */}
           {/* <WebpageShowcase /> */}
@@ -108,6 +110,8 @@ export default function HomePage(props) {
         </div>
       </div>
       {/* <Footer /> */}
+      </div>
+      : <Contact /> }
     </div>
   );
 }
