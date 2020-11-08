@@ -19,6 +19,8 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
 import Resume from "./Sections/Resume.js";
 import Contact from "./Sections/Contact.js";
+import About from "./Sections/About.js";
+
 // import TeamSection from "./Sections/TeamSection.js";
 // import WorkSection from "./Sections/WorkSection.js";
 
@@ -27,24 +29,38 @@ const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
 export default function HomePage(props) {
+  const [clickShowcase, setClickShowcase] = useState(true);
+  const [clickAbout, setClickAbout] = useState(false);
   const [clickContact, setClickContact] = useState(false);
+
   const classes = useStyles();
   const { ...rest } = props;
 
-  // const resumeClick = () => {
-  //   setClickResume(!clickResume);
-  // };
+  const showcaseClick = () => {
+    setClickShowcase(true);
+    setClickAbout(false);
+    setClickContact(false);
+  }
+
+  const aboutClick = () => {
+    setClickAbout(true);
+    setClickContact(false);
+    setClickShowcase(false);
+  }
 
   const contactClick = () => {
-    setClickContact(!clickContact);
+    setClickContact(true);
+    setClickAbout(false);
+    setClickShowcase(false);
   }
+
   return (
     <div>
       <Header
         color="transparent"
         routes={dashboardRoutes}
         brand="Jerry McDonald"
-        rightLinks={<HeaderLinks contactClick={contactClick} />}
+        rightLinks={<HeaderLinks showcaseClick={showcaseClick} aboutClick={aboutClick} contactClick={contactClick} />}
         fixed
         changeColorOnScroll={{
           height: 400,
@@ -72,9 +88,16 @@ export default function HomePage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}> */}
+      <div className={classNames(classes.main, classes.mainRaised)}> 
         <div className={classes.container}>
-          {clickContact ? <Contact /> : <WebpageShowcase />}
+
+          {clickShowcase ? <WebpageShowcase /> :null}
+          {clickAbout ? <About /> :null}
+          {clickContact ? <Contact /> :null}
+
+          {/* {showCard} */}
+          {/* <WebpageShowcase /> */}
+          {/* {clickContact ? <Contact /> } */}
           {/* <TeamSection /> */}
           {/* <WorkSection /> */}
         </div>
