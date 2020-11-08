@@ -19,40 +19,24 @@ import CustomDropdown from "../../components/CustomDropdown/CustomDropdown.js";
 import Button from "../../components/CustomButtons/Button.js";
 
 import styles from "../../assets/jss/material-kit-react/components/headerLinksStyle.js";
+import resume from "../../assets/img/pdfs/Jerry_McDonald_Resume.pdf"
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
 
-  const message = () => {
-    alert('Hello!');
-  }
-
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          buttonText="dropdown"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          // buttonIcon={Apps}
-          dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              All components
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
-          ]}
-        />
+        <ListItem className={classes.listItem}>
+        <Button
+          href={"/"}
+          color="transparent"
+          // target="_blank"
+          className={classes.navLink}
+        >
+           Showcase
+        </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
@@ -77,7 +61,7 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          // href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href={resume}
           onClick={props.resumeClick}
           color="transparent"
           target="_blank"
@@ -89,3 +73,5 @@ export default function HeaderLinks(props) {
     </List>
   );
 }
+
+// that one day is now
