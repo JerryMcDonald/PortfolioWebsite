@@ -31,7 +31,6 @@ export default function ContactPage(props) {
   const [classicModal, setClassicModal] = React.useState(false);
   const [fromContactPage, setFromContactPage] = React.useState(true);
 
-  
   setTimeout(function () {
     setCardAnimation("");
   }, 700);

@@ -74,44 +74,46 @@ export default function HomePage(props) {
         }}
         {...rest}
       />
-      { !clickContact ?
-      <div>
-      <Parallax filter image={require("../../assets/img/bg3.jpg")}>
-        <div className={classes.container}>
-         <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={6}>
-              <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>
-                Hi{" "}
-                <span role="img" aria-label="sheep">
-                  👋
-                </span>{" "}
-                I'm Jerry{" "}
-              </p>
+      {!clickContact ? (
+        <div>
+          <Parallax filter image={require("../../assets/img/bg3.jpg")}>
+            <div className={classes.container}>
+              <GridContainer justify="center">
+                <GridItem xs={12} sm={12} md={6}>
+                  <p style={{ paddingLeft: 150, fontSize: 35, lineHeight: 2 }}>
+                    Hi{" "}
+                    <span role="img" aria-label="sheep">
+                      👋
+                    </span>{" "}
+                    I'm Jerry{" "}
+                  </p>
 
-              <p style={{ paddingLeft: 94, fontSize: 25 }}>
-                {" "}
-                Problem Solver || Coder || Dad{" "}
-              </p>
-            </GridItem>
-          </GridContainer>
-        </div>
-      </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          {clickShowcase ? <WebpageShowcase /> : null}
-          {clickAbout ? <About /> : null}
-          {/* {clickContact ? <Contact /> : null} */}
+                  <p style={{ paddingLeft: 94, fontSize: 25 }}>
+                    {" "}
+                    Problem Solver || Coder || Dad{" "}
+                  </p>
+                </GridItem>
+              </GridContainer>
+            </div>
+          </Parallax>
+          <div className={classNames(classes.main, classes.mainRaised)}>
+            <div className={classes.container}>
+              {clickShowcase ? <WebpageShowcase /> : null}
+              {clickAbout ? <About /> : null}
+              {/* {clickContact ? <Contact /> : null} */}
 
-          {/* {showCard} */}
-          {/* <WebpageShowcase /> */}
-          {/* {clickContact ? <Contact /> } */}
-          {/* <TeamSection /> */}
-          {/* <WorkSection /> */}
+              {/* {showCard} */}
+              {/* <WebpageShowcase /> */}
+              {/* {clickContact ? <Contact /> } */}
+              {/* <TeamSection /> */}
+              {/* <WorkSection /> */}
+            </div>
+          </div>
+          {/* <Footer /> */}
         </div>
-      </div>
-      {/* <Footer /> */}
-      </div>
-      : <Contact /> }
+      ) : (
+        <Contact />
+      )}
     </div>
   );
 }
