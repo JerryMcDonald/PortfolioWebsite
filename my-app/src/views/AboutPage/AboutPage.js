@@ -55,7 +55,7 @@ export default function AboutPage(props) {
   const { ...rest } = props;
   const imageClasses = classNames(
     classes.imgRaised,
-    classes.imgRoundedSquare,
+    classes.imgRoundedCircle,
     classes.imgFluid
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
