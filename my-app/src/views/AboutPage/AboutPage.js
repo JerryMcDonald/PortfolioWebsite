@@ -23,6 +23,13 @@ import profile from "../../assets/img/avatar-jerry.jpg";
 
 import js from "../../assets/img/icons/JS.png";
 import react from "../../assets/img/icons/React.png";
+import css from "../../assets/img/icons/CSS.png";
+import html from "../../assets/img/icons/html.png";
+import vue from "../../assets/img/icons/vue.png";
+import AngularJS from "../../assets/img/icons/AngularJS.png";
+
+
+
 
 import studio1 from "../../assets/img/examples/studio-1.jpg";
 import studio2 from "../../assets/img/examples/studio-2.jpg";
@@ -111,10 +118,16 @@ export default function AboutPage(props) {
               <div className={iconClasses.root}>
               <Avatar variant="square" className={classes.square} src={js} title='Javascript' />
 
-              <Avatar variant="square" className={classes.square} src={react} title='Javascript' />
+              <Avatar variant="square" className={classes.square} src={react} title='React' />
               {/* <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}> */}
-
+              <Avatar variant="square" className={classes.square} src={css} title='CSS' />
               {/* </GridItem> */}
+              <Avatar variant="square" className={classes.square} src={html} title='HTML' />
+
+              <Avatar variant="square" className={classes.square} src={vue} title='Vue.js' />
+
+              <Avatar variant="square" className={classes.square} src={AngularJS} title='AngularJS' />
+
               </div>
             </GridContainer>
             <GridContainer justify="center">
