@@ -27,6 +27,19 @@ import css from "../../assets/img/icons/CSS.png";
 import html from "../../assets/img/icons/html.png";
 import vue from "../../assets/img/icons/vue.png";
 import AngularJS from "../../assets/img/icons/AngularJS.png";
+import nodejs from "../../assets/img/icons/nodejs.png";
+import mysql from "../../assets/img/icons/mysql.png";
+import ExpressJS from "../../assets/img/icons/Express JS.png";
+import mongoDB from "../../assets/img/icons/mongoDB.png";
+import Sequelize from "../../assets/img/icons/Sequelize.png";
+import GCloud from "../../assets/img/icons/GCloud.png";
+import CSharp from "../../assets/img/icons/CSharp.png";
+import dotNetCore from "../../assets/img/icons/dotNetCore.png";
+
+
+
+
+
 
 
 
@@ -127,6 +140,31 @@ export default function AboutPage(props) {
               <Avatar variant="square" className={classes.square} src={vue} title='Vue.js' />
 
               <Avatar variant="square" className={classes.square} src={AngularJS} title='AngularJS' />
+
+              <Avatar variant="square" className={classes.square} src={nodejs} title='NodeJS' />
+
+
+
+
+              </div>
+            </GridContainer>
+            <GridContainer justify="center">
+              <div className={iconClasses.root}>
+
+              <Avatar variant="square" className={classes.square} src={CSharp} title='C#' />
+
+              <Avatar variant="square" className={classes.square} src={dotNetCore} title='.NET Core' />
+
+              <Avatar variant="square" className={classes.square} src={mysql} title='MySQL' />
+
+              <Avatar variant="square" className={classes.square} src={ExpressJS} title='Express JS' />
+
+              <Avatar variant="square" className={classes.square} src={mongoDB} title='mongoDB' />
+
+              <Avatar variant="square" className={classes.square} src={Sequelize} title='Sequelize' />
+
+              <Avatar variant="square" className={classes.square} src={GCloud} title='Google Cloud' />
+
 
               </div>
             </GridContainer>
