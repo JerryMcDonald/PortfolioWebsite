@@ -61,7 +61,7 @@ export default function WebpageShowcase() {
               color="primary"
               tabs={[
                 {
-                  tabButton: "Studio",
+                  tabButton: "Operation Spark",
                   tabIcon: Camera,
                   tabContent: (
                     <GridContainer justify="center">
