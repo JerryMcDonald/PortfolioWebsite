@@ -24,12 +24,11 @@ import studio3 from "../../../assets/img/examples/studio-3.jpg";
 import studio4 from "../../../assets/img/examples/studio-4.jpg";
 import studio5 from "../../../assets/img/examples/studio-5.jpg";
 
-
 import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
 
-const useStyles = makeStyles(styles); 
+const useStyles = makeStyles(styles);
 
 const useShowcaseStyles = makeStyles(showcaseStyles);
 
@@ -37,7 +36,10 @@ export default function WebpageShowcase() {
   const classes = useStyles();
   const showcaseClasses = useShowcaseStyles();
 
-  const navImageClasses = classNames(showcaseClasses.imgRounded, showcaseClasses.imgGallery);
+  const navImageClasses = classNames(
+    showcaseClasses.imgRounded,
+    showcaseClasses.imgGallery
+  );
 
   return (
     <div className={classes.section}>
@@ -53,47 +55,59 @@ export default function WebpageShowcase() {
       </GridContainer>
       <div>
         <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
-                <NavPills
-                  alignCenter
-                  color="primary"
-                  tabs={[
-                    {
-                      tabButton: "Studio",
-                      tabIcon: Camera,
-                      tabContent: (
-                        <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
-                            />
-                            {/* <img
+          <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+            <NavPills
+              alignCenter
+              color="primary"
+              tabs={[
+                {
+                  tabButton: "Studio",
+                  tabIcon: Camera,
+                  tabContent: (
+                    <GridContainer justify="center">
+                      <GridItem xs={12} sm={12} md={4}>
+                        <img
+                          alt="..."
+                          src={studio2}
+                          className={navImageClasses}
+                        />
+                        {/* <img
                               alt="..."
                               src={studio2}
                               className={navImageClasses}
                             /> */}
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                            <img
-                              alt="..."
-                              src={studio5}
-                              className={navImageClasses}
-                            />
-                            {/* <img
+                      </GridItem>
+                      <GridItem xs={12} sm={12} md={4}>
+                        <img
+                          alt="..."
+                          src={studio5}
+                          className={navImageClasses}
+                        />
+                        {/* <img
                               alt="..."
                               src={studio4}
                               className={navImageClasses}
                             /> */}
-                          </GridItem>
-                        </GridContainer>
-                      )
-                    },
-                  ]}
-                  />
-                </GridItem>
-              </GridContainer>
+                      </GridItem>
+                      <GridItem xs={12} sm={12} md={4}>
+                        <img
+                          alt="..."
+                          src={studio5}
+                          className={navImageClasses}
+                        />
+                        {/* <img
+                              alt="..."
+                              src={studio4}
+                              className={navImageClasses}
+                            /> */}
+                      </GridItem>
+                    </GridContainer>
+                  ),
+                },
+              ]}
+            />
+          </GridItem>
+        </GridContainer>
         {/* </div>
           </div> */}
         {/* <GridContainer>
