@@ -122,11 +122,12 @@ export default function AboutPage(props) {
                 </div>
               </GridItem>
             </GridContainer>
-            <div className={classes.description}>
-              <p>
-                This is where I will talk about myslef. blah blah blah{" "}
-              </p>
-            </div>
+            <GridContainer justify="center">
+              <GridItem xs={12} sm={12} md={7} className={classes.navWrapper}>
+                <p>
+                In my free time, I try to create, create, create. I build webpages, design games, and edit YouTube videos with my daughter. Because I am a developer, I would not be proud to look back and see I did not spend my extra time crafting. I would bring this perspective to my next place of employment, making sure I can end my day proud of what I accomplished.               </p>
+              </GridItem>
+            </GridContainer>
             <GridContainer justify="center">
               <div className={iconClasses.root}>
               <Avatar variant="square" className={classes.square} src={js} title='Javascript' />
@@ -170,6 +171,9 @@ export default function AboutPage(props) {
             </GridContainer>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+                <p>
+              I have experience with both front and back-end JavaScript frameworks: React, AngularJS, and Vue, Node/Express, Sails.js, and WebSocket packages like Socket.IO. I have designed and built databases with MySQL and MongoDB, working with raw SQL queries and ORMs like Sequelize or Mongoose.
+              </p>
               </GridItem>
             </GridContainer>
           </div>
