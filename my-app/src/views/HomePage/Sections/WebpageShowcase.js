@@ -84,9 +84,12 @@ export default function WebpageShowcase() {
                         <GridItem xs={12} sm={12} md={16}>
                           <img alt=".." src={operationSpark} />
                           <div className={typoClasses.section}>
-                          <div className={typoClasses.typo} style={{ paddingLeft: 0}}>
-                                <Info>
-                                  <p style={{ color: "gray"}}>
+                            <div
+                              className={typoClasses.typo}
+                              style={{ paddingLeft: 0 }}
+                            >
+                              <Info>
+                                <p style={{ color: "gray" }}>
                                   Operation Spark is a coding Bootcamp in New
                                   Orleans, Louisiana. There are three phases of
                                   the course: prep, bootcamp, and immersion. You
@@ -101,16 +104,16 @@ export default function WebpageShowcase() {
                                   task of building webpages, programs, or games
                                   with technologies of your choosing. I am proud
                                   to have completed OPSpark, and I would be
-                                  happy to talk with anyone considering
-                                  the program. Just send me a message!
-                                  </p>
-                                </Info>
-                              </div>
+                                  happy to talk with anyone considering the
+                                  program. Just send me a message!
+                                </p>
+                              </Info>
+                            </div>
                           </div>
                           <div>
                             <p style={{ color: "black" }}>
-                              Here are the three webpages my team and I completed
-                              during Operation Spark.
+                              Here are the three webpages my team and I
+                              completed during Operation Spark.
                             </p>
                           </div>
                         </GridItem>
