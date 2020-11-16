@@ -19,7 +19,7 @@ import HomePage from "./views/HomePage/HomePage.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <HashRouter history={hist}>
+  <Router history={hist}>
     <Switch>
       {/* <Route path="/landing-page" component={LandingPage} /> */}
       <Route exact path="/aboutme-page" component={About} />
@@ -29,6 +29,6 @@ ReactDOM.render(
       {/* <Route path="/wtf/page" components={HomePage} /> */}
       <Route path="/" component={HomePage} />
     </Switch>
-  </HashRouter>,
+  </Router>,
   document.getElementById("root")
 );
