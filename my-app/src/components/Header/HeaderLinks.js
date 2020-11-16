@@ -42,7 +42,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
         <Button
           // href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
-          href={"/aboutme-page"}
+          href={"/#/aboutme-page"}
           // onClick={props.aboutClick}
           color="transparent"
           // target="_blank"
@@ -65,7 +65,7 @@ export default function HeaderLinks(props) {
       </ListItem> */}
       <ListItem className={classes.listItem}>
         <Button
-          href={"/contact-page"}
+          href={"/#/contact-page"}
           color="transparent"
           // we do not want contact to open in a new tab
           // target="_blank"
