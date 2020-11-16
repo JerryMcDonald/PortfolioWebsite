@@ -76,8 +76,8 @@ export default function WebpageShowcase() {
               color="rose"
               tabs={[
                 {
-                  tabButton: "Operation Spark",
-                  tabIcon: Code,
+                  tabButton: <img alt=".." src={operationSpark} />,
+                  // tabIcon: Code,
                   tabContent: (
                     <div>
                       <GridContainer justify="center">
