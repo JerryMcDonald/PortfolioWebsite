@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, HashRouter, Router, Route, Switch } from "react-router-dom";
 
 import "./assets/scss/material-kit-react.scss?v=1.9.0";
 
@@ -19,16 +19,16 @@ import HomePage from "./views/HomePage/HomePage.js";
 var hist = createBrowserHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
+  <BrowserRouter history={hist}>
     <Switch>
       {/* <Route path="/landing-page" component={LandingPage} /> */}
-      <Route path="/aboutme-page" component={About} />
+      <Route exact path="/aboutme-page" component={About} />
       {/* <Route path="/login-page" component={LoginPage} /> */}
       {/* <Route path="/resume-page" component={Resume} /> */}
-      <Route path="/contact-page" component={Contact} />
+      <Route exact path="/contact-page" component={Contact} />
       {/* <Route path="/wtf/page" components={HomePage} /> */}
       <Route path="/" component={HomePage} />
     </Switch>
-  </Router>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
