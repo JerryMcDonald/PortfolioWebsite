@@ -121,7 +121,7 @@ export default function HomePage(props) {
               {clickShowcase ? <WebpageShowcase /> : null}
               {clickAbout ? <About /> : null}
               {/* {clickContact ? <Contact /> : null} */}
-              <SectionDownload />
+              {/* <SectionDownload /> */}
               {/* {showCard} */}
               {/* <WebpageShowcase /> */}
               {/* {clickContact ? <Contact /> } */}
