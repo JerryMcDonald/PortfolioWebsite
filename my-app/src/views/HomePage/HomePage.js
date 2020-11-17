@@ -17,6 +17,7 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
+import SectionDownload from "./Sections/SectionDownload.js";
 // import Resume from "./Sections/Resume.js";
 import Contact from "./Sections/Contact.js";
 import About from "./Sections/About.js";
@@ -101,7 +102,7 @@ export default function HomePage(props) {
               {clickShowcase ? <WebpageShowcase /> : null}
               {clickAbout ? <About /> : null}
               {/* {clickContact ? <Contact /> : null} */}
-
+              <SectionDownload />
               {/* {showCard} */}
               {/* <WebpageShowcase /> */}
               {/* {clickContact ? <Contact /> } */}
