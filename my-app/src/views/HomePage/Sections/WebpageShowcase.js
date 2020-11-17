@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Icon from '@material-ui/core/Icon';
 
 // @fortawesome library
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -18,7 +18,7 @@ import Button from "../../../components/CustomButtons/Button.js";
 // import Fingerprint from "@material-ui/icons/Fingerprint";
 // import Camera from "@material-ui/icons/Camera";
 // import CellWifiOutlined from "@material-ui/icons/CellWifiOutlined";
-import Code from "@material-ui/icons/Code";
+// import Code from "@material-ui/icons/Code";
 
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";
@@ -30,7 +30,7 @@ import Info from "../../../components/Typography/Info.js";
 // my images and icons
 // import operationSparkSVG from "../../../assets/img/icons/operationSparkSVG.svg";
 import operationSpark from "../../../assets/img/OPSparkLogo.png";
-import CSharp from "../../../assets/img/icons/CSharp.png";
+// import CSharp from "../../../assets/img/icons/CSharp.png";
 
 // images
 // import studio1 from "../../../assets/img/examples/studio-1.jpg";
@@ -44,19 +44,19 @@ import styles from "../../../assets/jss/material-kit-react/views/landingPageSect
 // bring in typography style
 import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 // bring in icon style
-import iconStyles from "../../../assets/jss/material-kit-react/views/componentsSections/downloadStyle.js"
+// import iconStyles from "../../../assets/jss/material-kit-react/views/componentsSections/downloadStyle.js";
 
 import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
 const useTypoStyles = makeStyles(typoStyles);
-const useIconStyles = makeStyles(iconStyles);
+// const useIconStyles = makeStyles(iconStyles);
 const useShowcaseStyles = makeStyles(showcaseStyles);
 
 export default function WebpageShowcase() {
   const classes = useStyles();
   const typoClasses = useTypoStyles();
-  const iconClasses = useIconStyles();
+  // const iconClasses = useIconStyles();
   const showcaseClasses = useShowcaseStyles();
 
   const navImageClasses = classNames(
@@ -84,9 +84,11 @@ export default function WebpageShowcase() {
               color="rose"
               tabs={[
                 {
-                  tabButton: <span style={{fontSize: 40 }}>
-                  <i class="fas fa-robot"></i>
-                </span>,
+                  tabButton: (
+                    <span style={{ fontSize: 40 }}>
+                      <i className="fas fa-robot"></i>
+                    </span>
+                  ),
                   // tabIcon: Code,
                   tabContent: (
                     <div>
@@ -94,7 +96,8 @@ export default function WebpageShowcase() {
                         <GridItem xs={12} sm={12} md={16}>
                           {/* <img alt=".." src={operationSpark} /> */}
                           <Button color="twitter">
-                          <FontAwesomeIcon icon={faCoffee} /></Button>
+                            <FontAwesomeIcon icon={faCoffee} />
+                          </Button>
                           <div className={typoClasses.section}>
                             <div
                               className={typoClasses.typo}
