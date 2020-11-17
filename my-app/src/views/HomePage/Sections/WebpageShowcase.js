@@ -38,6 +38,7 @@ import studio2 from "../../../assets/img/examples/studio-2.jpg";
 // import studio3 from "../../../assets/img/examples/studio-3.jpg";
 // import studio4 from "../../../assets/img/examples/studio-4.jpg";
 import studio5 from "../../../assets/img/examples/studio-5.jpg";
+import dotNetCore from "../../../assets/img/icons/dotNetCore.png";
 
 import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
@@ -94,10 +95,7 @@ export default function WebpageShowcase() {
                     <div>
                       <GridContainer justify="center">
                         <GridItem xs={12} sm={12} md={16}>
-                          {/* <img alt=".." src={operationSpark} /> */}
-                          <Button color="twitter">
-                            <FontAwesomeIcon icon={faCoffee} />
-                          </Button>
+                          <img alt=".." src={operationSpark} />
                           <div className={typoClasses.section}>
                             <div
                               className={typoClasses.typo}
@@ -137,7 +135,7 @@ export default function WebpageShowcase() {
                         <GridItem xs={12} sm={12} md={4}>
                           <img
                             alt="..."
-                            src={studio2}
+                            src={dotNetCore}
                             className={navImageClasses}
                           />
                           {/* <img
@@ -149,7 +147,7 @@ export default function WebpageShowcase() {
                         <GridItem xs={12} sm={12} md={4}>
                           <img
                             alt="..."
-                            src={studio5}
+                            src={dotNetCore}
                             className={navImageClasses}
                           />
                           {/* <img
@@ -159,16 +157,12 @@ export default function WebpageShowcase() {
                             /> */}
                         </GridItem>
                         <GridItem xs={12} sm={12} md={4}>
+                        
                           <img
                             alt="..."
-                            src={studio5}
+                            src={dotNetCore}
                             className={navImageClasses}
                           />
-                          {/* <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
-                            /> */}
                         </GridItem>
                       </GridContainer>
                     </div>
