@@ -106,14 +106,20 @@ export default function HomePage(props) {
                     <i className={classes.socials + " fab fa-google-plus-g"} />
                     Share
                   </Button> */}
+                  </GridItem>
+                  </GridContainer>
+                  <GridContainer justify="center">
+                  <GridItem style={{ paddingLeft: 150 }} xs={12} sm={12} md={6}>
                   <Button color="github">
                     <i className={classes.socials + " fab fa-github"} /> Github
                   </Button>
                   <Button color="linkedIn" >
                     <i className={classes.socials + " fab fa-linkedin"} /> LinkedIN
                   </Button>
-                </GridItem>
-              </GridContainer>
+                  </GridItem>
+                  </GridContainer>
+                
+              
             </div>
           </Parallax>
           <div className={classNames(classes.main, classes.mainRaised)}>
