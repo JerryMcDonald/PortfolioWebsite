@@ -30,6 +30,7 @@ import Info from "../../../components/Typography/Info.js";
 // my images and icons
 // import operationSparkSVG from "../../../assets/img/icons/operationSparkSVG.svg";
 import operationSpark from "../../../assets/img/OPSparkLogo.png";
+import Crawl from "../../../assets/img/Crawl.jpg";
 // import CSharp from "../../../assets/img/icons/CSharp.png";
 
 // images
@@ -135,7 +136,7 @@ export default function WebpageShowcase() {
                         <GridItem xs={12} sm={12} md={4}>
                           <img
                             alt="..."
-                            src={dotNetCore}
+                            src={Crawl}
                             className={navImageClasses}
                           />
                           {/* <img
