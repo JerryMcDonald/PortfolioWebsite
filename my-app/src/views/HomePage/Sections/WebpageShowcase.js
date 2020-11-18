@@ -11,6 +11,8 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 
+import OperationSpark from "../Sections/OperationSpark.js";
+
 // @material-ui/icons
 import Button from "../../../components/CustomButtons/Button.js";
 // import Chat from "@material-ui/icons/Chat";
@@ -19,6 +21,7 @@ import Button from "../../../components/CustomButtons/Button.js";
 // import Camera from "@material-ui/icons/Camera";
 // import CellWifiOutlined from "@material-ui/icons/CellWifiOutlined";
 // import Code from "@material-ui/icons/Code";
+import "../../../assets/css/styles.css";
 
 // core components
 import GridContainer from "../../../components/Grid/GridContainer.js";
@@ -31,6 +34,8 @@ import Info from "../../../components/Typography/Info.js";
 // import operationSparkSVG from "../../../assets/img/icons/operationSparkSVG.svg";
 import operationSpark from "../../../assets/img/OPSparkLogo.png";
 import Crawl from "../../../assets/img/Crawl.jpg";
+import crawlCrop from "../../../assets/img/showcase/crawlCrop.png";
+import crawlLogo from "../../../assets/img/showcase/crawlLogo.png";
 // import CSharp from "../../../assets/img/icons/CSharp.png";
 
 // images
@@ -89,121 +94,20 @@ export default function WebpageShowcase() {
                   tabButton: (
                     <span style={{ fontSize: 40 }}>
                       <i className="fas fa-robot"></i>
+                      {/* <img alt=".." className="photo" src={crawlLogo} /> */}
                     </span>
                   ),
                   // tabIcon: Code,
                   tabContent: (
-                    <div>
-                      <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={16}>
-                          <img alt=".." src={operationSpark} />
-                          <div className={typoClasses.section}>
-                            <div
-                              className={typoClasses.typo}
-                              style={{ paddingLeft: 0 }}
-                            >
-                              <Info>
-                                <p style={{ color: "gray" }}>
-                                  Operation Spark is a coding Bootcamp in New
-                                  Orleans, Louisiana. There are three phases of
-                                  the course: prep, bootcamp, and immersion. You
-                                  begin by being introduced to javascript, then
-                                  strengthen your skills through coding
-                                  challenges and projects. You transition to
-                                  front end web development using HTML, CSS,
-                                  React, and Vue, then to back-end API services
-                                  like Node.js, and finally database management
-                                  with MySQL and MongoDB. At the end of the
-                                  program, they pair you into groups with the
-                                  task of building webpages, programs, or games
-                                  with technologies of your choosing. I am proud
-                                  to have completed OPSpark, and I would be
-                                  happy to talk with anyone considering the
-                                  program. Just send me a message!
-                                </p>
-                              </Info>
-                            </div>
-                          </div>
-                          <div>
-                            <p style={{ color: "black" }}>
-                              Here are the three webpages my team and I
-                              completed during Operation Spark.
-                            </p>
-                          </div>
-                        </GridItem>
-                      </GridContainer>
-                      <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={4}>
-                          <img
-                            alt="..."
-                            src={Crawl}
-                            className={navImageClasses}
-                          />
-                          {/* <img
-                              alt="..."
-                              src={studio2}
-                              className={navImageClasses}
-                            /> */}
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={4}>
-                          <img
-                            alt="..."
-                            src={dotNetCore}
-                            className={navImageClasses}
-                          />
-                          {/* <img
-                              alt="..."
-                              src={studio4}
-                              className={navImageClasses}
-                            /> */}
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={4}>
-                        
-                          <img
-                            alt="..."
-                            src={dotNetCore}
-                            className={navImageClasses}
-                          />
-                        </GridItem>
-                      </GridContainer>
-                    </div>
+               <div>
+                 <OperationSpark />
+               </div>
                   ),
                 },
               ]}
             />
           </GridItem>
         </GridContainer>
-        {/* </div>
-          </div> */}
-        {/* <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <InfoArea
-              title="LRN"
-              // description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Chat}
-              iconColor="info"
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <InfoArea
-              title="Crawl"
-              // description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={VerifiedUser}
-              iconColor="success"
-              vertical
-            />
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <InfoArea
-              title="Organize Power"
-              // description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
-              icon={Fingerprint}
-              iconColor="danger"
-              vertical
-            />
-          </GridItem>
-        </GridContainer> */}
       </div>
     </div>
   );
