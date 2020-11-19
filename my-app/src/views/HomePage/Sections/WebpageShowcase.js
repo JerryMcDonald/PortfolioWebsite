@@ -99,9 +99,9 @@ export default function WebpageShowcase() {
                   ),
                   // tabIcon: Code,
                   tabContent: (
-               <div>
-                 <OperationSpark />
-               </div>
+                    <div>
+                      <OperationSpark />
+                    </div>
                   ),
                 },
               ]}
