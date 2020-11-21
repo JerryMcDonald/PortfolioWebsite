@@ -76,7 +76,7 @@ export default function WebpageShowcase() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           {/* <h2 className={classes.title}>Showcase</h2> */}
-          {/* <h5 className={classes.description}>
+          {/* <h5 className={classes.description}>cx
             I will have large image icons that will showcase the work that I
             completed in Bootcamp, and later I will showcase my work with
             C#/.Net
