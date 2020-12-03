@@ -30,7 +30,7 @@ import OPLogoMed from "../../../assets/img/OP-logoMed.jpg";
 import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
-import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js"
+import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js";
 
 // const useStyles = makeStyles(styles);
 const useTypoStyles = makeStyles(typoStyles);
@@ -102,15 +102,27 @@ const DialogActions = withStyles((theme) => ({
 export default function OperationSpark() {
   const [open, setOpen] = React.useState(false);
   const [openTwo, setOpenTwo] = React.useState(false);
+  const [openThree, setOpenThree] = React.useState(false);
 
   const typoClasses = useTypoStyles();
   const classes = useStyles();
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleClickOpen = (i) => {
+    if (i === 0) {
+      setOpen(true);
+    }
+    if (i === 1) {
+      setOpenTwo(true);
+    }
+    if (i === 2) {
+      setOpenThree(true);
+    }
   };
+
   const handleClose = () => {
     setOpen(false);
+    setOpenTwo(false);
+    setOpenThree(false);
   };
 
   return (
@@ -151,7 +163,7 @@ export default function OperationSpark() {
               <ButtonBase
                 focusRipple
                 key={image.title}
-                onClick={handleClickOpen}
+                onClick={() => handleClickOpen(index)}
                 className={classes.image}
                 focusVisibleClassName={classes.focusVisible}
                 style={{
@@ -180,8 +192,8 @@ export default function OperationSpark() {
             ))}
           </div>
           {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}> */}
-            {/* <img alt=".." className="photo" src={crawlLogo} /> */}
-            {/* test */}
+          {/* <img alt=".." className="photo" src={crawlLogo} /> */}
+          {/* test */}
           {/* </Button> */}
           <Dialog
             onClose={handleClose}
@@ -189,7 +201,7 @@ export default function OperationSpark() {
             open={open}
           >
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-              Modal title
+              Crawl
             </DialogTitle>
             <DialogContent dividers>
               <Typography gutterBottom>
@@ -217,10 +229,10 @@ export default function OperationSpark() {
           <Dialog
             onClose={handleClose}
             aria-labelledby="customized-dialog-title"
-            open={open}
+            open={openTwo}
           >
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-              Wakakaka
+              Organize Power
             </DialogTitle>
             <DialogContent dividers>
               <Typography gutterBottom>
@@ -244,6 +256,40 @@ export default function OperationSpark() {
                 Save changes
               </Button>
             </DialogActions>
+          </Dialog>
+          <Dialog
+            onClose={handleClose}
+            aria-labelledby="customized-dialog-title"
+            open={openThree}
+          >
+            <div>
+              <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+                LRN
+              </DialogTitle>
+              <DialogContent dividers>
+                <Typography gutterBottom>
+                  Cras mattis consectetur purus sit amet fermentum. Cras justo
+                  odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
+                  risus, porta ac consectetur ac, vestibulum at eros.
+                </Typography>
+                <Typography gutterBottom>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur et. Vivamus sagittis lacus vel augue laoreet
+                  rutrum faucibus dolor auctor.
+                </Typography>
+                <Typography gutterBottom>
+                  Aenean lacinia bibendum nulla sed consectetur. Praesent
+                  commodo cursus magna, vel scelerisque nisl consectetur et.
+                  Donec sed odio dui. Donec ullamcorper nulla non metus auctor
+                  fringilla.
+                </Typography>
+              </DialogContent>
+              <DialogActions>
+                <Button autoFocus onClick={handleClose} color="primary">
+                  Save changes
+                </Button>
+              </DialogActions>
+            </div>
           </Dialog>
         </div>
       </GridContainer>
