@@ -37,7 +37,8 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-Insert Lined-in, Github, and Dev-to links              </a>
+{/* Insert Lined-in, Github, and Dev-to links               */}
+</a>
             </ListItem>
             {/* <ListItem className={classes.inlineBlock}>
               <a
