@@ -1,4 +1,6 @@
 import React from "react";
+import Carousel from "react-slick";
+
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 import "../../../assets/css/styles.css";
@@ -12,10 +14,12 @@ import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
+import LocationOn from "@material-ui/icons/LocationOn";
 
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Info from "../../../components/Typography/Info.js";
+import Card from "../../../components/Card/Card.js";
 
 // my images and icons
 import operationSpark from "../../../assets/img/OPSparkLogo.png";
@@ -24,9 +28,16 @@ import crawlCrop from "../../../assets/img/showcase/crawlCrop.png";
 import crawlLogo from "../../../assets/img/showcase/crawlLogo.png";
 import OPHomepage from "../../../assets/img/OP-homepage.jpg";
 import OPLogoMed from "../../../assets/img/OP-logoMed.jpg";
+import lrnLogo from "../../../assets/img/showcase/learningResourcesNowLogo.png";
+import lrnLogoCropOne from "../../../assets/img/showcase/lrnLogoCropOne.png";
+import lrnImageOne from "../../../assets/img/showcase/lrnShowcaseOne.jpg";
+import lrnImageTwo from "../../../assets/img/showcase/lrnShowcaseTwo.jpg";
+import lrnImageThree from "../../../assets/img/showcase/lrnShowcaseThree.jpg";
+import lrnImageFour from "../../../assets/img/showcase/lrnShowcaseFour.jpg";
 
 // images
 
+import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
@@ -35,6 +46,7 @@ import breakawayStyles from "../../../assets/jss/material-kit-react/views/compon
 // const useStyles = makeStyles(styles);
 const useTypoStyles = makeStyles(typoStyles);
 const useShowcaseStyles = makeStyles(showcaseStyles);
+const useCarouselStyles = makeStyles(carouselStyle);
 
 const images = [
   {
@@ -47,7 +59,7 @@ const images = [
     width: "33%",
   },
   {
-    url: crawlLogo,
+    url: lrnLogoCropOne,
     title: "LRN",
     width: "33%",
   },
@@ -106,6 +118,7 @@ export default function OperationSpark() {
 
   const typoClasses = useTypoStyles();
   const classes = useStyles();
+  const carouselClasses = useCarouselStyles();
 
   const handleClickOpen = (i) => {
     if (i === 0) {
@@ -123,6 +136,15 @@ export default function OperationSpark() {
     setOpen(false);
     setOpenTwo(false);
     setOpenThree(false);
+  };
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
   };
 
   return (
@@ -201,24 +223,32 @@ export default function OperationSpark() {
             open={open}
           >
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-              Crawl
+              <GridItem xs={12} sm={4}>
+                <img
+                  src={crawlLogo}
+                  alt="..."
+                  className={
+                    typoClasses.imgRounded + " " + typoClasses.imgFluid
+                  }
+                />
+              </GridItem>
             </DialogTitle>
             <DialogContent dividers>
-              <Typography gutterBottom>
-                Cras mattis consectetur purus sit amet fermentum. Cras justo
-                odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-                risus, porta ac consectetur ac, vestibulum at eros.
-              </Typography>
-              <Typography gutterBottom>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur
-                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                dolor auctor.
-              </Typography>
-              <Typography gutterBottom>
-                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-                cursus magna, vel scelerisque nisl consectetur et. Donec sed
-                odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              </Typography>
+              <GridContainer justify="center">
+                <GridItem xs={12} sm={10}>
+                  <img
+                    src={Crawl}
+                    alt="..."
+                    className={
+                      typoClasses.imgRounded + " " + typoClasses.imgFluid
+                    }
+                  />
+                </GridItem>
+              </GridContainer>
+              <Typography gutterBottom> <h3> An app for planning and managing social bar crawl events.
+              </h3></Typography>
+              <Typography gutterBottom>Paragraph two about Crawl</Typography>
+              <Typography gutterBottom>Paragraph three about Crawl</Typography>
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose} color="primary">
@@ -235,21 +265,20 @@ export default function OperationSpark() {
               Organize Power
             </DialogTitle>
             <DialogContent dividers>
-              <Typography gutterBottom>
-                Cras mattis consectetur purus sit amet fermentum. Cras justo
-                odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-                risus, porta ac consectetur ac, vestibulum at eros.
-              </Typography>
-              <Typography gutterBottom>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur
-                et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus
-                dolor auctor.
-              </Typography>
-              <Typography gutterBottom>
-                Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-                cursus magna, vel scelerisque nisl consectetur et. Donec sed
-                odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-              </Typography>
+              <GridContainer justify="center">
+                <GridItem xs={12} sm={10}>
+                  <img
+                    src={OPHomepage}
+                    alt="..."
+                    className={
+                      typoClasses.imgRounded + " " + typoClasses.imgFluid
+                    }
+                  />
+                </GridItem>
+              </GridContainer>
+              <Typography gutterBottom>Paragraph one about OP</Typography>
+              <Typography gutterBottom>Paragraph two about OP</Typography>
+              <Typography gutterBottom>Paragraph three about OP</Typography>
             </DialogContent>
             <DialogActions>
               <Button autoFocus onClick={handleClose} color="primary">
@@ -264,25 +293,60 @@ export default function OperationSpark() {
           >
             <div>
               <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-                LRN
+                Learning Resources Now
               </DialogTitle>
               <DialogContent dividers>
-                <Typography gutterBottom>
-                  Cras mattis consectetur purus sit amet fermentum. Cras justo
-                  odio, dapibus ac facilisis in, egestas eget quam. Morbi leo
-                  risus, porta ac consectetur ac, vestibulum at eros.
-                </Typography>
-                <Typography gutterBottom>
-                  Praesent commodo cursus magna, vel scelerisque nisl
-                  consectetur et. Vivamus sagittis lacus vel augue laoreet
-                  rutrum faucibus dolor auctor.
-                </Typography>
-                <Typography gutterBottom>
-                  Aenean lacinia bibendum nulla sed consectetur. Praesent
-                  commodo cursus magna, vel scelerisque nisl consectetur et.
-                  Donec sed odio dui. Donec ullamcorper nulla non metus auctor
-                  fringilla.
-                </Typography>
+                <GridItem
+                  xs={12}
+                  sm={12}
+                  md={12}
+                  className={classes.marginAuto}
+                >
+                  <Card carousel>
+                    <Carousel {...settings}>
+                      <div>
+                        <img
+                          src={lrnImageThree}
+                          alt="First slide"
+                          className="slick-image"
+                        />
+                        <div className="slick-caption">
+                          {/* <h4>
+                            <LocationOn className="slick-icons" />
+                            Yellowstone National Park, United States
+                          </h4> */}
+                        </div>
+                      </div>
+                      <div>
+                        <img
+                          src={lrnImageOne}
+                          alt="Second slide"
+                          className="slick-image"
+                        />
+                        <div className="slick-caption"></div>
+                      </div>
+                      <div>
+                        <img
+                          src={lrnImageTwo}
+                          alt="Third slide"
+                          className="slick-image"
+                        />
+                        <div className="slick-caption"></div>
+                      </div>
+                      <div>
+                        <img
+                          src={lrnImageFour}
+                          alt="Third slide"
+                          className="slick-image"
+                        />
+                        <div className="slick-caption"></div>
+                      </div>
+                    </Carousel>
+                  </Card>
+                </GridItem>
+                <Typography gutterBottom>Paragraph one about LRN</Typography>
+                <Typography gutterBottom>Paragraph two about LRN</Typography>
+                <Typography gutterBottom>Paragraph three about LRN</Typography>
               </DialogContent>
               <DialogActions>
                 <Button autoFocus onClick={handleClose} color="primary">
