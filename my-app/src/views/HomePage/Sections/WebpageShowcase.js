@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @fortawesome library
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 // nodejs library that concatenates classes
