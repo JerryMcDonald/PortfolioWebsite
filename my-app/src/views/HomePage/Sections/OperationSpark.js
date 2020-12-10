@@ -245,14 +245,31 @@ export default function OperationSpark() {
                   />
                 </GridItem>
               </GridContainer>
-              <Typography gutterBottom> <h3> An app for planning and managing social bar crawl events.
-              </h3></Typography>
-              <Typography gutterBottom>Paragraph two about Crawl</Typography>
-              <Typography gutterBottom>Paragraph three about Crawl</Typography>
+              <Typography gutterBottom>
+                <p>
+                  An app for planning and managing social bar crawl events.{" "}
+                </p>
+              </Typography>
+              <Typography gutterBottom>
+                <h3>Features</h3>
+              </Typography>
+              <Typography gutterBottom>
+                On our website, you can create and save your own party's bar
+                crawls. Then you can search Google Maps and add bars to a crawl
+                by location. You can View individual crawl pages with a custom
+                map of user locations. Users can also follow the crawl's status,
+                see crawl participants, and send text messages to participants.
+                Our site also Authenticates users via Google.
+              </Typography>
             </DialogContent>
             <DialogActions>
-              <Button autoFocus onClick={handleClose} color="primary">
-                Save changes
+              <Button
+                autoFocus
+                href="https://github.com/Apptonomy/Crawl"
+                target="_blank"
+                color="primary"
+              >
+                View the Repo
               </Button>
             </DialogActions>
           </Dialog>
@@ -276,13 +293,39 @@ export default function OperationSpark() {
                   />
                 </GridItem>
               </GridContainer>
-              <Typography gutterBottom>Paragraph one about OP</Typography>
-              <Typography gutterBottom>Paragraph two about OP</Typography>
-              <Typography gutterBottom>Paragraph three about OP</Typography>
+              <Typography gutterBottom></Typography>
+              <Typography
+                gutterBottom
+                style={{
+                  paddingTop: "50px",
+                  boxSizing: "content-box",
+                }}
+              >
+                <p>
+                  Organize power a social media platform that promotes social
+                  causes and helps users organize movements.{" "}
+                </p>
+              </Typography>
+              <Typography gutterBottom>
+                <h3>Features</h3>
+              </Typography>
+              <Typography gutterBottom>
+                OP features individual movement pages, user profiles, and the
+                explore section. Users can interact with movements and each
+                other through a feature-packed comment section. A user can also
+                associate political figures with movements and begin civic
+                engagement through text or email. We have also included Passport
+                authentication.{" "}
+              </Typography>
             </DialogContent>
             <DialogActions>
-              <Button autoFocus onClick={handleClose} color="primary">
-                Save changes
+              <Button
+                autoFocus
+                href="https://github.com/Apptonomy/organizepower"
+                target="_blank"
+                color="primary"
+              >
+                View the Repo
               </Button>
             </DialogActions>
           </Dialog>
@@ -344,13 +387,32 @@ export default function OperationSpark() {
                     </Carousel>
                   </Card>
                 </GridItem>
-                <Typography gutterBottom>Paragraph one about LRN</Typography>
-                <Typography gutterBottom>Paragraph two about LRN</Typography>
-                <Typography gutterBottom>Paragraph three about LRN</Typography>
+                <Typography gutterBottom>
+                  <p>
+                    Connecting students with classroom-like instruction in a
+                    video lecture. Offering more features that are related to
+                    the classroom. Built around the idea of more freelance
+                    educators being able to start and hold classes.{" "}
+                  </p>
+                </Typography>
+                <Typography gutterBottom>
+                  <h3>Features</h3>
+                </Typography>
+                <Typography gutterBottom>
+                  LRN features a good map of your local city that lists lectures
+                  that instructors have posted. It features real-time face to
+                  face communication through socket.io. It also features a
+                  shareable whiteboard and a classroom chat.{" "}
+                </Typography>
               </DialogContent>
               <DialogActions>
-                <Button autoFocus onClick={handleClose} color="primary">
-                  Save changes
+                <Button
+                  autoFocus
+                  href="https://github.com/HWY-61/LRN"
+                  target="_blank"
+                  color="primary"
+                >
+                  View the Repo
                 </Button>
               </DialogActions>
             </div>
