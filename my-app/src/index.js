@@ -12,6 +12,7 @@ import "./assets/scss/material-kit-react.scss?v=1.9.0";
 // import LoginPage from "views/LoginPage/LoginPage.js";
 import Contact from "./views/ContactPage/ContactPage.js";
 import About from "./views/AboutPage/AboutPage.js";
+import Images from "./views/ImagesPage/ImagesPage.js";
 
 // import Resume from "./views/ResumePage/ResumePage.js";
 import HomePage from "./views/HomePage/HomePage.js";
@@ -27,6 +28,7 @@ ReactDOM.render(
       {/* <Route path="/resume-page" component={Resume} /> */}
       <Route exact path="/contact-page" component={Contact} />
       {/* <Route path="/wtf/page" components={HomePage} /> */}
+      <Route path="/image-page" component={Images} />
       <Route path="/" component={HomePage} />
     </Switch>
   </Router>,
