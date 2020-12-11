@@ -110,10 +110,18 @@ export default function HomePage(props) {
               </GridContainer>
               <GridContainer justify="center">
                 <GridItem style={{ paddingLeft: 150 }} xs={12} sm={12} md={6}>
-                  <Button color="github" target="_blank" href="https://github.com/JerryMcDonald">
+                  <Button
+                    color="github"
+                    target="_blank"
+                    href="https://github.com/JerryMcDonald"
+                  >
                     <i className={classes.socials + " fab fa-github"} /> Github
                   </Button>
-                  <Button color="linkedIn" target="_blank" href="https://www.linkedin.com/in/jerry-mcdonald-2089891b3/">
+                  <Button
+                    color="linkedIn"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/jerry-mcdonald-2089891b3/"
+                  >
                     <i className={classes.socials + " fab fa-linkedin"} />{" "}
                     LinkedIN
                   </Button>
