@@ -109,7 +109,7 @@ export default function HomePage(props) {
                 </GridItem>
               </GridContainer>
               <GridContainer justify="center">
-                <GridItem style={{ paddingLeft: 150 }} xs={12} sm={12} md={6}>
+                <GridItem style={{ paddingLeft: 85 }} xs={12} sm={12} md={6}>
                   <Button
                     color="github"
                     target="_blank"
@@ -124,6 +124,13 @@ export default function HomePage(props) {
                   >
                     <i className={classes.socials + " fab fa-linkedin"} />{" "}
                     LinkedIN
+                  </Button>
+                  <Button
+                    color="github"
+                    target="_blank"
+                    href="https://dev.to/jerrymcdonald"
+                  >
+                    <i className={classes.socials + " fab fa-dev"} /> dev.to
                   </Button>
                 </GridItem>
               </GridContainer>
