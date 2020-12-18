@@ -213,10 +213,6 @@ export default function OperationSpark() {
               </ButtonBase>
             ))}
           </div>
-          {/* <Button variant="outlined" color="primary" onClick={handleClickOpen}> */}
-          {/* <img alt=".." className="photo" src={crawlLogo} /> */}
-          {/* test */}
-          {/* </Button> */}
           <Dialog
             onClose={handleClose}
             aria-labelledby="customized-dialog-title"
