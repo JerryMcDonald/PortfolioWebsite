@@ -97,15 +97,6 @@ export default function AboutPage(props) {
                   <div className={classes.name}>
                     <h3 className={classes.title}>Jerry McDonald</h3>
                     <h6>Programmer</h6>
-                    {/* <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button> */}
                   </div>
                 </div>
               </GridItem>
