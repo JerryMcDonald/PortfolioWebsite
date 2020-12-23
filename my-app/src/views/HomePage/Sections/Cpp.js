@@ -29,17 +29,20 @@ import CppBlogBannerTwo from "../../../assets/img/blog/CppBlogBannerTwo.png";
 // import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
 // import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import blogsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.js";
+import projectsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
 // const useStyles = makeStyles(blogsStyle);
 // const useShowcaseStyles = makeStyles(showcaseStyles);
 // const useTypoStyles = makeStyles(typoStyles);
 // const useCarouselStyles = makeStyles(carouselStyle);
 const useStyles = makeStyles(blogsStyle);
+const useProjectsStyles = makeStyles(projectsStyle);
 
 export default function Cpp() {
   // const typoClasses = useTypoStyles();
   // const carouselClasses = useCarouselStyles();
   const classes = useStyles();
+  const projectClasses = useProjectsStyles();
 
   return (
     <div>
@@ -164,40 +167,46 @@ export default function Cpp() {
       </div>
       {/* Blogs END */}
       {/* Project START */}
-      {/* <div className={classes.projects + " " + classes.projects4}>
-        <div className={classes.container}>
+      {/* <div className={projectClasses.projects + " " + projectClasses.projects4}>
+        <div className={projectClasses.container}>
           <GridContainer>
             <GridItem
               xs={12}
               sm={8}
               md={8}
               className={
-                classes.mlAuto + " " + classes.mrAuto + " " + classes.textCenter
+                projectClasses.mlAuto +
+                " " +
+                projectClasses.mrAuto +
+                " " +
+                projectClasses.textCenter
               }
             >
-              <h2 className={classes.title}>
+              <h2 className={projectClasses.title}>
                 Some of Our Awesome Products - 4
               </h2>
-              <h5 className={classes.description}>
+              <h5 className={projectClasses.description}>
                 This is the paragraph where you can write more details about
                 your projects. Keep you user engaged by providing meaningful
                 information.
               </h5>
-              <div className={classes.sectionSpace} />
+              <div className={projectClasses.sectionSpace} />
             </GridItem>
           </GridContainer>
           <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
               <Card
                 background
-                className={classes.card4}
-                style={{ backgroundImage: `url(${cardProject2})` }}
+                className={projectClasses.card4}
+                style={{ backgroundImage: `url(${CppBlogBannerOne})` }}
               >
-                <CardBody background className={classes.cardBody4}>
+                <CardBody background className={projectClasses.cardBody4}>
                   <Badge color="rose">Client: Apple</Badge>
-                  <a href="#pablo" onClick={e => e.preventDefault}>
-                    <h3 className={classes.cardTitle}>Beautiful Project</h3>
-                    <p className={classes.cardDescription}>
+                  <a href="#pablo" onClick={(e) => e.preventDefault}>
+                    <h3 className={projectClasses.cardTitle}>
+                      Beautiful Project
+                    </h3>
+                    <p className={projectClasses.cardDescription}>
                       Don{"'"}t be scared of the truth because we need to
                       restart the human foundation in truth.
                     </p>
@@ -205,23 +214,23 @@ export default function Cpp() {
                 </CardBody>
               </Card>
             </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mrAuto}>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="Graphic Design"
                 description="We've created the design of the website using modern Technologies like Sketch. It was a very interesting collaboration."
                 icon={FormatPaint}
                 iconColor="info"
               />
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="Fully Coded in HTML5"
                 description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
                 icon={Code}
                 iconColor="primary"
               />
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="CMS Admin Dashboard"
                 description="There is also a Fully Customizable CMS Admin Dashboard for this product."
                 icon={Dashboard}
@@ -231,40 +240,40 @@ export default function Cpp() {
           </GridContainer>
           <hr />
           <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={classes.mlAuto}>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="Marketing"
                 description="We've created the marketing campaign of the website. It was a very interesting collaboration."
                 icon={Timeline}
                 iconColor="rose"
               />
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="Fully Coded in HTML5"
                 description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
                 icon={Code}
                 iconColor="success"
               />
               <InfoArea
-                className={classes.info4}
+                className={projectClasses.info4}
                 title="Built Audience"
                 description="There is also a Fully Customizable CMS Admin Dashboard for this product."
                 icon={Group}
                 iconColor="info"
               />
             </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={classes.mrAuto}>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
               <Card
                 background
-                className={classes.card4}
+                className={projectClasses.card4}
                 style={{ backgroundImage: `url(${cardProject5})` }}
               >
-                <CardBody background className={classes.cardBody4}>
+                <CardBody background className={projectClasses.cardBody4}>
                   <Badge color="rose">CLIENT: DJ KHALED</Badge>
-                  <a href="#pablo" onClick={e => e.preventDefault}>
-                    <h3 className={classes.cardTitle}>Another One</h3>
-                    <p className={classes.cardDescription}>
+                  <a href="#pablo" onClick={(e) => e.preventDefault}>
+                    <h3 className={projectClasses.cardTitle}>Another One</h3>
+                    <p className={projectClasses.cardDescription}>
                       Don{"'"}t be scared of the truth because we need to
                       restart the human foundation in truth.
                     </p>
