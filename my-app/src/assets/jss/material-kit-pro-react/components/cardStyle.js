@@ -9,7 +9,7 @@ import {
   warningColor,
   infoColor,
   hexToRgb
-} from "assets/jss/material-kit-pro-react.js";
+} from "../../material-kit-pro-react.js";
 
 const cardStyle = {
   card: {
