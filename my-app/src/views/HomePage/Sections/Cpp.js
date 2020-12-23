@@ -68,7 +68,11 @@ export default function Cpp() {
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablito" onClick={(e) => e.preventDefault()}>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/c-variables-functions-conditionals-and-logic-in-vscode-2mpk"
+                      >
                         <img src={CppBlogBannerTwo} alt="..." />
                       </a>
                       <div
@@ -82,7 +86,11 @@ export default function Cpp() {
                   </GridItem>
                   <GridItem xs={12} sm={7} md={7}>
                     <h3 className={classes.cardTitle}>
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/c-variables-functions-conditionals-and-logic-in-vscode-2mpk"
+                      >
                         C++ Variables, Functions, Conditionals, and Logic. In
                         VSCode.
                       </a>
@@ -90,8 +98,12 @@ export default function Cpp() {
                     <p className={classes.description1}>
                       In this series, I am reviewing the C++ basics, primarily
                       for those who already understand a coding language and are
-                      curious about what makes C++ different. — and…
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      curious about what makes C++ different.
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/c-variables-functions-conditionals-and-logic-in-vscode-2mpk"
+                      >
                         {" "}
                         Read More{" "}
                       </a>
@@ -103,7 +115,11 @@ export default function Cpp() {
                 <GridContainer>
                   <GridItem xs={12} sm={7} md={7}>
                     <h3 className={classes.cardTitle}>
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/create-a-c-program-run-in-visual-studio-code-58ea"
+                      >
                         Create a C++ program. Run in Visual Studio Code.{" "}
                       </a>
                     </h3>
@@ -111,8 +127,12 @@ export default function Cpp() {
                       Do you think that C++ is too old school to learn? Think
                       again! It is still a highly sought after skill. Learning
                       C++ will better prepare you for learning C# and give you a
-                      broader skill set! — and…
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                      broader skill set!
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/create-a-c-program-run-in-visual-studio-code-58ea"
+                      >
                         {" "}
                         Read More{" "}
                       </a>
@@ -120,7 +140,11 @@ export default function Cpp() {
                   </GridItem>
                   <GridItem xs={12} sm={5} md={5}>
                     <CardHeader image plain>
-                      <a href="#pablito" onClick={(e) => e.preventDefault()}>
+                      <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://dev.to/jerrymcdonald/create-a-c-program-run-in-visual-studio-code-58ea"
+                      >
                         <img src={CppBlogBannerOne} alt="..." />
                       </a>
                       <div
