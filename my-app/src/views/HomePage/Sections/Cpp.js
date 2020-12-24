@@ -11,11 +11,20 @@ import "../../../assets/css/styles.css";
 // import CloseIcon from "@material-ui/icons/Close";
 // import Typography from "@material-ui/core/Typography";
 import Divider from "@material-ui/core/Divider";
+import FormatPaint from "@material-ui/icons/FormatPaint";
+import Code from "@material-ui/icons/Code";
+import Dashboard from "@material-ui/icons/Dashboard";
+import Timeline from "@material-ui/icons/Timeline";
+import Group from "@material-ui/icons/Group";
 
 // components
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Card from "../../../components/Card/Card.js";
+import CardBody from "../../../components/Card/CardBody.js";
+import Badge from "../../../components/Badge/Badge.js";
+import InfoArea from "../../../components/InfoArea/InfoArea.js";
+
 import CardHeader from "../../../components/Card/CardHeader.js";
 import Quote from "../../../components/Typography/Quote.js";
 
@@ -46,6 +55,7 @@ export default function Cpp() {
 
   return (
     <div>
+      <hr />
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={16}>
           <Quote
@@ -54,7 +64,7 @@ export default function Cpp() {
           />
         </GridItem>
       </GridContainer>
-      <Divider variant="middle" />
+      <hr />
       {/* Blogs START */}
       <div className={classes.blog}>
         <div className={classes.container}>
@@ -167,7 +177,7 @@ export default function Cpp() {
       </div>
       {/* Blogs END */}
       {/* Project START */}
-      {/* <div className={projectClasses.projects + " " + projectClasses.projects4}>
+      <div className={projectClasses.projects + " " + projectClasses.projects4}>
         <div className={projectClasses.container}>
           <GridContainer>
             <GridItem
@@ -267,7 +277,7 @@ export default function Cpp() {
               <Card
                 background
                 className={projectClasses.card4}
-                style={{ backgroundImage: `url(${cardProject5})` }}
+                style={{ backgroundImage: `url(${CppBlogBannerOne})` }}
               >
                 <CardBody background className={projectClasses.cardBody4}>
                   <Badge color="rose">CLIENT: DJ KHALED</Badge>
@@ -283,7 +293,7 @@ export default function Cpp() {
             </GridItem>
           </GridContainer>
         </div>
-      </div> */}
+      </div>
       {/* Projects END */}
       <Divider variant="middle" />
     </div>
