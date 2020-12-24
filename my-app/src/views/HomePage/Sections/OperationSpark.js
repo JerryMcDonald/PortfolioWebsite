@@ -22,12 +22,12 @@ import Info from "../../../components/Typography/Info.js";
 import Card from "../../../components/Card/Card.js";
 
 // my images and icons
-import operationSpark from "../../../assets/img/OPSparkLogo.png";
-import Crawl from "../../../assets/img/Crawl.jpg";
+import operationSpark from "../../../assets/img/assorted/OPSparkLogo.png";
+import Crawl from "../../../assets/img/assorted/Crawl.jpg";
 import crawlCrop from "../../../assets/img/showcase/crawlCrop.png";
 import crawlLogo from "../../../assets/img/showcase/crawlLogo.png";
-import OPHomepage from "../../../assets/img/OP-homepage.jpg";
-import OPLogoMed from "../../../assets/img/OP-logoMed.jpg";
+import OPHomepage from "../../../assets/img/assorted/OP-homepage.jpg";
+import OPLogoMed from "../../../assets/img/assorted/OP-logoMed.jpg";
 import lrnLogo from "../../../assets/img/showcase/learningResourcesNowLogo.png";
 import lrnLogoCropOne from "../../../assets/img/showcase/lrnLogoCropOne.png";
 import lrnImageOne from "../../../assets/img/showcase/lrnShowcaseOne.jpg";

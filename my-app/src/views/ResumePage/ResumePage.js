@@ -1,5 +1,5 @@
 import React from "react";
-import { Document } from 'react-pdf/dist/entry.noworker';
+import { Document } from "react-pdf/dist/entry.noworker";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,9 +24,9 @@ import Card from "../../components/Card/Card.js";
 
 import styles from "../../assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "../../assets/img/bg3.jpg";
+import image from "../../assets/img/assorted/bg3.jpg";
 
-import resume from "../../assets/img//pdfs/Jerry_McDonald_Resume.pdf"
+import resume from "../../assets/img//pdfs/Jerry_McDonald_Resume.pdf";
 
 const useStyles = makeStyles(styles);
 
@@ -59,12 +59,12 @@ export default function ResumePage(props) {
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={4}>
               <Card className={classes[cardAnimaton]}>
-                  <embed
-    src={resume + "#toolbar=0"}
-    type="application/pdf"
-    height={600}
-    width={500}
-  />
+                <embed
+                  src={resume + "#toolbar=0"}
+                  type="application/pdf"
+                  height={600}
+                  width={500}
+                />
               </Card>
             </GridItem>
           </GridContainer>
