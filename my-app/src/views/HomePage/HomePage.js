@@ -72,7 +72,7 @@ export default function HomePage(props) {
       />
       {!clickContact ? (
         <div>
-          <Parallax filter image={require("../../assets/img/bg3.jpg")}>
+          <Parallax filter image={require("../../assets/img/assorted/bg3.jpg")}>
             <div className={classes.container}>
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={6}>

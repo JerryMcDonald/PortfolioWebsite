@@ -19,7 +19,7 @@ import HeaderLinks from "../../components/Header/HeaderLinks.js";
 import NavPills from "../../components/NavPills/NavPills.js";
 import Parallax from "../../components/Parallax/Parallax.js";
 
-import profile from "../../assets/img/avatar-jerry.jpg";
+import profile from "../../assets/img/assorted/avatar-jerry.jpg";
 
 import js from "../../assets/img/icons/JS.png";
 import react from "../../assets/img/icons/React.png";
@@ -84,7 +84,11 @@ export default function AboutPage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("../../assets/img/bg3.jpg")} />
+      <Parallax
+        small
+        filter
+        image={require("../../assets/img/assorted/bg3.jpg")}
+      />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>

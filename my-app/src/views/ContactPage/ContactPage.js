@@ -22,7 +22,7 @@ import Card from "../../components/Card/Card.js";
 
 import styles from "../../assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "../../assets/img/bg3.jpg";
+import image from "../../assets/img/assorted/bg3.jpg";
 
 const useStyles = makeStyles(styles);
 

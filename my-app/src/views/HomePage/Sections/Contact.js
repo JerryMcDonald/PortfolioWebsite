@@ -22,7 +22,7 @@ import Card from "../../../components/Card/Card.js";
 
 import styles from "../../../assets/jss/material-kit-react/views/loginPage.js";
 
-import image from "../../../assets/img/bg3.jpg";
+import image from "../../../assets/img/assorted/bg3.jpg";
 
 const useStyles = makeStyles(styles);
 
@@ -31,7 +31,6 @@ export default function ContactPage(props) {
   // const [classicModal, setClassicModal] = React.useState(false);
   // const [fromContactPage, setFromContactPage] = React.useState(true);
 
-  
   setTimeout(function () {
     setCardAnimation("");
   }, 700);
