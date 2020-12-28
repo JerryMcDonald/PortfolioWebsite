@@ -6,16 +6,20 @@ import { makeStyles } from "@material-ui/core/styles";
 import "../../../assets/css/styles.css";
 
 // material-ui components
+import Code from "@material-ui/icons/Code";
+import Group from "@material-ui/icons/Group";
+import Divider from "@material-ui/core/Divider";
+import Ballot from "@material-ui/icons/Ballot";
+import Flare from "@material-ui/icons/Flare";
+
 // import MuiDialogTitle from "@material-ui/core/DialogTitle";
 // import IconButton from "@material-ui/core/IconButton";
 // import CloseIcon from "@material-ui/icons/Close";
 // import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import FormatPaint from "@material-ui/icons/FormatPaint";
-import Code from "@material-ui/icons/Code";
-import Dashboard from "@material-ui/icons/Dashboard";
-import Timeline from "@material-ui/icons/Timeline";
-import Group from "@material-ui/icons/Group";
+// import FormatPaint from "@material-ui/icons/FormatPaint";
+// import Dashboard from "@material-ui/icons/Dashboard";
+// import Timeline from "@material-ui/icons/Timeline";
+
 
 // components
 import GridContainer from "../../../components/Grid/GridContainer.js";
@@ -31,6 +35,10 @@ import Quote from "../../../components/Typography/Quote.js";
 // images and icons
 import CppBlogBannerOne from "../../../assets/img/blog/CppBlogBannerOne.png";
 import CppBlogBannerTwo from "../../../assets/img/blog/CppBlogBannerTwo.png";
+import CppCert from "../../../assets/img/creds/CodecademyCert.jpg";
+import OOYAone from "../../../assets/img/projects/ooyaGifOne.webp";
+import RPSLS from "../../../assets/img/projects/RPSLS.webp";
+import ticTacToe from "../../../assets/img/projects/Tic-tac-toe-animated.gif";
 
 // import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 // import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js";
@@ -55,9 +63,28 @@ export default function Cpp() {
 
   return (
     <div>
+      <br />
+      <GridContainer justify="center">
+        <GridItem xs={12} sm={5} md={5}>
+          <CardHeader image plain>
+            <img src={CppCert} alt="..." />
+
+            <div
+              className={classes.coloredShadow}
+              style={{
+                backgroundImage: `url(${CppCert})`,
+                opacity: "1",
+              }}
+            />
+          </CardHeader>
+        </GridItem>
+      </GridContainer>
+      <br />
+      <br />
+      <br />
       <hr />
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={16}>
+        <GridItem xs={12} sm={12} md={14}>
           <Quote
             text="“C++ is designed to allow you to express ideas, but if you don't have ideas or don't have any clue about how to express them, C++ doesn't offer much help.”"
             author=" Bjarne Stroustrup"
@@ -76,7 +103,6 @@ export default function Cpp() {
               className={classes.mlAuto + " " + classes.mrAuto}
             >
               <h2 className={classes.title}>Blogposts</h2>
-              <br />
               <Card plain blog className={classes.card}>
                 <GridContainer>
                   <GridItem xs={12} sm={5} md={5}>
@@ -124,7 +150,12 @@ export default function Cpp() {
                   </GridItem>
                 </GridContainer>
               </Card>
-              <Card plain blog className={classes.card}>
+              <Card
+                plain
+                blog
+                className={classes.card}
+                style={{ marginBottom: "0px" }}
+              >
                 <GridContainer>
                   <GridItem xs={12} sm={7} md={7}>
                     <h3 className={classes.cardTitle}>
@@ -176,6 +207,7 @@ export default function Cpp() {
         </div>
       </div>
       {/* Blogs END */}
+      <hr />
       {/* Project START */}
       <div className={projectClasses.projects + " " + projectClasses.projects4}>
         <div className={projectClasses.container}>
@@ -192,9 +224,7 @@ export default function Cpp() {
                 projectClasses.textCenter
               }
             >
-              <h2 className={projectClasses.title}>
-                Some of Our Awesome Products - 4
-              </h2>
+              <h2 className={projectClasses.title}>C++ Applicaitons</h2>
               <h5 className={projectClasses.description}>
                 This is the paragraph where you can write more details about
                 your projects. Keep you user engaged by providing meaningful
@@ -208,42 +238,37 @@ export default function Cpp() {
               <Card
                 background
                 className={projectClasses.card4}
-                style={{ backgroundImage: `url(${CppBlogBannerOne})` }}
+                style={{ backgroundImage: `url(${OOYAone})` }}
               >
                 <CardBody background className={projectClasses.cardBody4}>
-                  <Badge color="rose">Client: Apple</Badge>
-                  <a href="#pablo" onClick={(e) => e.preventDefault}>
-                    <h3 className={projectClasses.cardTitle}>
-                      Beautiful Project
-                    </h3>
-                    <p className={projectClasses.cardDescription}>
-                      Don{"'"}t be scared of the truth because we need to
-                      restart the human foundation in truth.
-                    </p>
+                  <br />
+                  <br />
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/OOYA"
+                  >
+                    <Badge color="primary">View Repo</Badge>
                   </a>
+                  <h3 className={projectClasses.cardTitle}>
+                    The Object Of Your Affection
+                  </h3>
                 </CardBody>
               </Card>
             </GridItem>
             <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
               <InfoArea
                 className={projectClasses.info4}
-                title="Graphic Design"
-                description="We've created the design of the website using modern Technologies like Sketch. It was a very interesting collaboration."
-                icon={FormatPaint}
-                iconColor="info"
-              />
-              <InfoArea
-                className={projectClasses.info4}
-                title="Fully Coded in HTML5"
-                description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
-                icon={Code}
+                title="Summary"
+                description="A well-organized system of dating profiles built with C++ Objects and Classes allows users to view and create profile cards."
+                icon={Ballot}
                 iconColor="primary"
               />
               <InfoArea
                 className={projectClasses.info4}
-                title="CMS Admin Dashboard"
-                description="There is also a Fully Customizable CMS Admin Dashboard for this product."
-                icon={Dashboard}
+                title="Key Concepts"
+                description="A C++ constructor to instantiate new profile objects and C++ Vectors allows for organized user hobbies that can be modified."
+                icon={Code}
                 iconColor="danger"
               />
             </GridItem>
@@ -253,43 +278,81 @@ export default function Cpp() {
             <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
               <InfoArea
                 className={projectClasses.info4}
-                title="Marketing"
-                description="We've created the marketing campaign of the website. It was a very interesting collaboration."
-                icon={Timeline}
-                iconColor="rose"
-              />
-              <InfoArea
-                className={projectClasses.info4}
-                title="Fully Coded in HTML5"
-                description="We've developed the website with HTML5 and CSS3. The client has access to the code using GitHub."
-                icon={Code}
+                title="Summary"
+                description="A Traditional 2-player tic-tac-toe game on a 3x3 grid in the terminal."
+                icon={Ballot}
                 iconColor="success"
               />
               <InfoArea
                 className={projectClasses.info4}
-                title="Built Audience"
-                description="There is also a Fully Customizable CMS Admin Dashboard for this product."
-                icon={Group}
+                title="Key Concepts"
+                description="Makes excellent use of a header file to organize function declarations and uses C++ logic and conditionals to determine a winner."
+                icon={Code}
                 iconColor="info"
               />
             </GridItem>
             <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
+            <Card
+                background
+                className={projectClasses.card4}
+                style={{ backgroundImage: `url(${ticTacToe})` }}
+              >
+                <CardBody background className={projectClasses.cardBody4}>
+                  <br />
+                  <br />
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/TTT"
+                  >
+                    <Badge color="primary">View Repo</Badge>
+                  </a>
+                  <h3 className={projectClasses.cardTitle}>
+                    The Object Of Your Affection
+                  </h3>
+                </CardBody>
+              </Card>
+            </GridItem>
+          </GridContainer>
+          <hr />
+          <GridContainer>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
               <Card
                 background
                 className={projectClasses.card4}
-                style={{ backgroundImage: `url(${CppBlogBannerOne})` }}
+                style={{ backgroundImage: `url(${RPSLS})` }}
               >
                 <CardBody background className={projectClasses.cardBody4}>
-                  <Badge color="rose">CLIENT: DJ KHALED</Badge>
-                  <a href="#pablo" onClick={(e) => e.preventDefault}>
-                    <h3 className={projectClasses.cardTitle}>Another One</h3>
-                    <p className={projectClasses.cardDescription}>
-                      Don{"'"}t be scared of the truth because we need to
-                      restart the human foundation in truth.
-                    </p>
+                  <br />
+                  <br />
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/RPSLS"
+                  >
+                    <Badge color="primary">View Repo</Badge>
                   </a>
+                  <h3 className={projectClasses.cardTitle}>
+                    The Object Of Your Affection
+                  </h3>
                 </CardBody>
               </Card>
+            </GridItem>
+            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
+              <InfoArea
+                className={projectClasses.info4}
+                title="Summary"
+                description="Sheldons favorite way handle a dispute"
+                icon={Flare}
+                iconColor="primary"
+              />
+              <InfoArea
+                className={projectClasses.info4}
+                title="Key Concepts"
+                description="I use the computer's internal clock to create a seed for the random number generator algorithm, allowing for code to generate a random response. "
+                icon={Code}
+                iconColor="danger"
+              />
             </GridItem>
           </GridContainer>
         </div>
