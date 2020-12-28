@@ -17,6 +17,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 import OperationSpark from "../Sections/OperationSpark.js";
 import Cpp from "../Sections/Cpp.js";
+import Javascript from "../Sections/Javascript.js";
 
 // @material-ui/icons
 // import Button from "../../../components/CustomButtons/Button.js";
@@ -28,6 +29,7 @@ import Cpp from "../Sections/Cpp.js";
 // import Code from "@material-ui/icons/Code";
 // import CSharp from "../../../assets/img/icons/CSharp.png";
 import CppIcon from "../../../assets/img/icons/C++_Icon.png";
+import JsIcon from "../../../assets/img/icons/JS.png";
 
 // core components
 // import Info from "../../../components/Typography/Info.js";
@@ -105,6 +107,24 @@ export default function WebpageShowcase() {
                   tabContent: (
                     <div>
                       <OperationSpark />
+                    </div>
+                  ),
+                },
+                {
+                  tabButton: (
+                    <div className={iconClasses.root}>
+                      <Avatar
+                        variant="square"
+                        className={classes.square}
+                        src={JsIcon}
+                        title="JS"
+                      />
+                    </div>
+                  ),
+                  // tabIcon: Code,
+                  tabContent: (
+                    <div>
+                      <Javascript />
                     </div>
                   ),
                 },
