@@ -23,7 +23,7 @@ const projectsSection = {
     textAlign: "center",
   },
   projects: {
-    padding: "80px 0",
+    padding: "40px 0",
   },
   tabSpace: {
     padding: "20px 0 50px 0px",
@@ -80,8 +80,8 @@ const projectsSection = {
     },
   },
   cardBody4: {
-    paddingTop: "140px",
-    paddingBottom: "140px",
+    paddingTop: "10px",
+    paddingBottom: "10px",
   },
   info4: {
     padding: "0",
