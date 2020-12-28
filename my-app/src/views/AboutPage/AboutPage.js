@@ -34,6 +34,7 @@ import mongoDB from "../../assets/img/icons/mongoDB.png";
 import Sequelize from "../../assets/img/icons/Sequelize.png";
 import GCloud from "../../assets/img/icons/GCloud.png";
 import CSharp from "../../assets/img/icons/CSharp.png";
+import Cpp from "../../assets/img/icons/C++_Icon.png";
 import dotNetCore from "../../assets/img/icons/dotNetCore.png";
 
 import studio1 from "../../assets/img/examples/studio-1.jpg";
@@ -108,12 +109,12 @@ export default function AboutPage(props) {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={7} className={classes.navWrapper}>
                 <p>
-                  In my free time, I try to create, create, create. I build
-                  webpages, design games, and edit YouTube videos with my
-                  daughter. Because I am a developer, I would not be proud to
-                  look back and see I did not spend my extra time crafting. I
-                  would bring this perspective to my next place of employment,
-                  making sure I can end my day proud of what I accomplished.{" "}
+                  I try to use my free time to create. I build webpages, design
+                  games, and edit YouTube videos with my daughter. I would not
+                  be proud to look back and see I did not spend my extra time
+                  crafting or making a difference. I would bring this
+                  perspective to my next place of employment, making sure I can
+                  end my day proud of what I accomplished.{" "}
                 </p>
               </GridItem>
             </GridContainer>
@@ -174,8 +175,8 @@ export default function AboutPage(props) {
                 <Avatar
                   variant="square"
                   className={classes.square}
-                  src={CSharp}
-                  title="C#"
+                  src={Cpp}
+                  title="C++"
                 />
 
                 <Avatar
@@ -224,11 +225,12 @@ export default function AboutPage(props) {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
                 <p>
-                  I have experience with both front and back-end JavaScript
-                  frameworks: React, AngularJS, and Vue, Node/Express, Sails.js,
-                  and WebSocket packages like Socket.IO. I have designed and
-                  built databases with MySQL and MongoDB, working with raw SQL
-                  queries and ORMs like Sequelize or Mongoose.
+                  I can code in JS or C++. I have experience with both front and
+                  back-end JavaScript frameworks: React, AngularJS, and Vue,
+                  Node/Express, Sails.js, and WebSocket packages like Socket.IO.
+                  I have designed and built databases with MySQL and MongoDB,
+                  working with raw SQL queries and ORMs like Sequelize or
+                  Mongoose.
                 </p>
               </GridItem>
             </GridContainer>
