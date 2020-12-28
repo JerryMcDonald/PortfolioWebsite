@@ -94,8 +94,26 @@ export default function WebpageShowcase() {
           <GridItem xs={18} sm={18} md={10} className={classes.navWrapper}>
             <NavPills
               alignCenter
-              color="rose"
+              color="primary"
               tabs={[
+                {
+                  tabButton: (
+                    <div className={iconClasses.root}>
+                      <Avatar
+                        variant="square"
+                        className={classes.square}
+                        src={JsIcon}
+                        title="JS"
+                        />
+                    </div>
+                  ),
+                  // tabIcon: Code,
+                  tabContent: (
+                    <div>
+                      <Javascript />
+                    </div>
+                  ),
+                },
                 {
                   tabButton: (
                     <span style={{ fontSize: 40 }}>
@@ -107,24 +125,6 @@ export default function WebpageShowcase() {
                   tabContent: (
                     <div>
                       <OperationSpark />
-                    </div>
-                  ),
-                },
-                {
-                  tabButton: (
-                    <div className={iconClasses.root}>
-                      <Avatar
-                        variant="square"
-                        className={classes.square}
-                        src={JsIcon}
-                        title="JS"
-                      />
-                    </div>
-                  ),
-                  // tabIcon: Code,
-                  tabContent: (
-                    <div>
-                      <Javascript />
                     </div>
                   ),
                 },
