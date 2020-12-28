@@ -20,7 +20,6 @@ import Flare from "@material-ui/icons/Flare";
 // import Dashboard from "@material-ui/icons/Dashboard";
 // import Timeline from "@material-ui/icons/Timeline";
 
-
 // components
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
@@ -226,9 +225,9 @@ export default function Cpp() {
             >
               <h2 className={projectClasses.title}>C++ Applicaitons</h2>
               <h5 className={projectClasses.description}>
-                This is the paragraph where you can write more details about
+                {/* This is the paragraph where you can write more details about
                 your projects. Keep you user engaged by providing meaningful
-                information.
+                information. */}
               </h5>
               <div className={projectClasses.sectionSpace} />
             </GridItem>
@@ -292,7 +291,7 @@ export default function Cpp() {
               />
             </GridItem>
             <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
-            <Card
+              <Card
                 background
                 className={projectClasses.card4}
                 style={{ backgroundImage: `url(${ticTacToe})` }}
