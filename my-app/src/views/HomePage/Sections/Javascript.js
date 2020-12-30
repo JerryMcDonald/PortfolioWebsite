@@ -39,6 +39,8 @@ import jsBlogBannerOne from "../../../assets/img/blog/jsBlogBannerOne.jpg";
 import jsBlogBannerTwo from "../../../assets/img/blog/jsBlogBannerTwo.jpg";
 
 import JsCert from "../../../assets/img/creds/JS-Cert-basic.jpg";
+import JsBadge from "../../../assets/img/creds/JS-badge-complete.png";
+import JqBadge from "../../../assets/img/creds/JQ-badge-complete.png";
 import OOYAone from "../../../assets/img/projects/ooyaGifOne.webp";
 import RPSLS from "../../../assets/img/projects/RPSLS.webp";
 import ticTacToe from "../../../assets/img/projects/Tic-tac-toe-animated.gif";
@@ -68,7 +70,21 @@ export default function Javascript() {
     <div>
       <br />
       <GridContainer justify="center">
-        <GridItem xs={12} sm={5} md={5}>
+        <GridItem xs={12} sm={4} md={4}>
+          <CardHeader image plain>
+            <img src={JsBadge} alt="..." />
+
+            <div
+              className={classes.coloredShadow}
+              style={{
+                backgroundImage: `url(${JsCert})`,
+                opacity: "1",
+              }}
+            />
+          </CardHeader>
+          
+        </GridItem>
+        <GridItem xs={12} sm={4} md={4}>
           <CardHeader image plain>
             <img src={JsCert} alt="..." />
 
@@ -80,6 +96,21 @@ export default function Javascript() {
               }}
             />
           </CardHeader>
+          
+        </GridItem>
+        <GridItem xs={12} sm={4} md={4}>
+          <CardHeader image plain>
+            <img src={JqBadge} alt="..." />
+
+            <div
+              className={classes.coloredShadow}
+              style={{
+                backgroundImage: `url(${JsCert})`,
+                opacity: "1",
+              }}
+            />
+          </CardHeader>
+          
         </GridItem>
       </GridContainer>
       <br />
