@@ -18,7 +18,6 @@ import styles from "../../assets/jss/material-kit-react/views/landingPage.js";
 // Sections
 import WebpageShowcase from "./Sections/WebpageShowcase.js";
 import Contact from "./Sections/Contact.js";
-import About from "./Sections/About.js";
 
 const dashboardRoutes = [];
 
@@ -134,7 +133,6 @@ export default function HomePage(props) {
           <div className={classNames(classes.main, classes.mainRaised)}>
             <div className={classes.container}>
               {clickShowcase ? <WebpageShowcase /> : null}
-              {clickAbout ? <About /> : null}
               {/* {clickContact ? <Contact /> : null} */}
               {/* <SectionDownload /> */}
               {/* {showCard} */}
