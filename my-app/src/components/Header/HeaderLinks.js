@@ -74,7 +74,7 @@ export default function HeaderLinks(props) {
            Contact
         </Button>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Button
           href={resume}
           onClick={props.resumeClick}
@@ -84,7 +84,7 @@ export default function HeaderLinks(props) {
         >
            Resume
         </Button>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }
