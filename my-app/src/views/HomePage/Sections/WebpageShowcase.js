@@ -104,7 +104,7 @@ export default function WebpageShowcase() {
                         className={classes.square}
                         src={JsIcon}
                         title="JS"
-                        />
+                      />
                     </div>
                   ),
                   // tabIcon: Code,
