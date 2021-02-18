@@ -45,6 +45,9 @@ const blogsSection = {
   card4: {
     marginBottom: "60px",
     textAlign: "center"
+  },
+  mag: {
+    cursor: 'zoom-in',
   }
 };
 
