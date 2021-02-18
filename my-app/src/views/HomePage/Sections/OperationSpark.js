@@ -1,9 +1,11 @@
 import React from "react";
 import Carousel from "react-slick";
+import Lightbox from 'react-image-lightbox';
 
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 
 import "../../../assets/css/styles.css";
+import 'react-image-lightbox/style.css';
 
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -20,6 +22,8 @@ import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Info from "../../../components/Typography/Info.js";
 import Card from "../../../components/Card/Card.js";
+import CardHeader from "../../../components/Card/CardHeader.js";
+
 
 // my images and icons
 import operationSpark from "../../../assets/img/assorted/OPSparkLogo.png";
@@ -34,19 +38,21 @@ import lrnImageOne from "../../../assets/img/showcase/lrnShowcaseOne.jpg";
 import lrnImageTwo from "../../../assets/img/showcase/lrnShowcaseTwo.jpg";
 import lrnImageThree from "../../../assets/img/showcase/lrnShowcaseThree.jpg";
 import lrnImageFour from "../../../assets/img/showcase/lrnShowcaseFour.jpg";
+import OperationSparkCert from "../../../assets/img/creds/opsparkCert.png";
 
 // images
 
 import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
 import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js";
+import blogsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.js";
 
-// const useStyles = makeStyles(styles);
 const useTypoStyles = makeStyles(typoStyles);
 const useShowcaseStyles = makeStyles(showcaseStyles);
 const useCarouselStyles = makeStyles(carouselStyle);
+const useBlogsStyle = makeStyles(blogsStyle);
+const useStyles = makeStyles(breakawayStyles);
 
 const images = [
   {
@@ -65,7 +71,10 @@ const images = [
   },
 ];
 
-const useStyles = makeStyles(breakawayStyles);
+const certificationImages = [
+  OperationSparkCert,
+]
+
 
 const dStyles = (theme) => ({
   root: {
@@ -115,10 +124,13 @@ export default function OperationSpark() {
   const [open, setOpen] = React.useState(false);
   const [openTwo, setOpenTwo] = React.useState(false);
   const [openThree, setOpenThree] = React.useState(false);
+  // const [index, setIndex] = React.useState(0);
+  const [certOpen, setCertOpen] = React.useState(false);
 
   const typoClasses = useTypoStyles();
   const classes = useStyles();
   const carouselClasses = useCarouselStyles();
+  const blogClasses = useBlogsStyle();
 
   const handleClickOpen = (i) => {
     if (i === 0) {
@@ -149,7 +161,38 @@ export default function OperationSpark() {
 
   return (
     <div>
+      <br />
+      <br />
       <GridContainer justify="center">
+      <GridItem xs={12} sm={4} md={4}>
+          <CardHeader image plain>
+            <div type="button" className={blogClasses.mag} onClick={() => {
+              setCertOpen(true);
+              console.log('test');
+              }}>
+            <img src={OperationSparkCert} alt="..." />
+        </div>
+            <div
+              className={blogClasses.coloredShadow}
+              style={{
+                backgroundImage: `url(${OperationSparkCert})`,
+                opacity: "1",
+              }}
+            />
+          </CardHeader>
+
+          // this will be the lightbox that will open if the cert is clicked
+          {certOpen && (
+          <Lightbox
+            mainSrc={OperationSparkCert}
+            imagePadding={500}
+            onCloseRequest={() => setCertOpen(false)}
+          />
+        )}
+        <br />
+        <br />
+        <br />
+        </GridItem>
         <GridItem xs={12} sm={12} md={16}>
           <img alt=".." src={operationSpark} />
           <div className={typoClasses.section}>
