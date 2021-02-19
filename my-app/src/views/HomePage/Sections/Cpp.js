@@ -1,5 +1,7 @@
 import React from "react";
-// import Carousel from "react-slick";
+import Lightbox from "react-image-lightbox";
+
+import "react-image-lightbox/style.css";
 
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -11,14 +13,6 @@ import Group from "@material-ui/icons/Group";
 import Divider from "@material-ui/core/Divider";
 import Ballot from "@material-ui/icons/Ballot";
 import Flare from "@material-ui/icons/Flare";
-
-// import MuiDialogTitle from "@material-ui/core/DialogTitle";
-// import IconButton from "@material-ui/core/IconButton";
-// import CloseIcon from "@material-ui/icons/Close";
-// import Typography from "@material-ui/core/Typography";
-// import FormatPaint from "@material-ui/icons/FormatPaint";
-// import Dashboard from "@material-ui/icons/Dashboard";
-// import Timeline from "@material-ui/icons/Timeline";
 
 // components
 import GridContainer from "../../../components/Grid/GridContainer.js";
@@ -39,22 +33,17 @@ import OOYAone from "../../../assets/img/projects/ooyaGifOne.webp";
 import RPSLS from "../../../assets/img/projects/RPSLS.webp";
 import ticTacToe from "../../../assets/img/projects/Tic-tac-toe-animated.gif";
 
-// import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
-// import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js";
-// import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
-// import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-// import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import blogsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.js";
 import projectsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
-// const useStyles = makeStyles(blogsStyle);
-// const useShowcaseStyles = makeStyles(showcaseStyles);
-// const useTypoStyles = makeStyles(typoStyles);
-// const useCarouselStyles = makeStyles(carouselStyle);
 const useStyles = makeStyles(blogsStyle);
 const useProjectsStyles = makeStyles(projectsStyle);
 
+const certImages = [CppCert];
+
 export default function Cpp() {
+  const [certOpen, setCertOpen] = React.useState(false);
+
   // const typoClasses = useTypoStyles();
   // const carouselClasses = useCarouselStyles();
   const classes = useStyles();
@@ -66,12 +55,26 @@ export default function Cpp() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={5} md={5}>
           <CardHeader image plain>
-            <img src={CppCert} alt="..." />
-
+            <div
+              type="button"
+              className={classes.mag}
+              onClick={() => {
+                setCertOpen(true);
+              }}
+            >
+              <img src={CppCert} alt="..." />
+            </div>
+          {certOpen && (
+            <Lightbox
+              mainSrc={certImages[0]}
+              imagePadding={50}
+              onCloseRequest={() => setCertOpen(false)}
+            />
+          )}
             <div
               className={classes.coloredShadow}
               style={{
-                backgroundImage: `url(${CppCert})`,
+                backgroundImage: `url(${certImages[0]})`,
                 opacity: "1",
               }}
             />
