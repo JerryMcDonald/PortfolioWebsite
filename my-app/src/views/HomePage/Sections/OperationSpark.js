@@ -1,11 +1,10 @@
 import React from "react";
 import Carousel from "react-slick";
-import Lightbox from 'react-image-lightbox';
+import Lightbox from "react-image-lightbox";
+
+import "react-image-lightbox/style.css";
 
 import { makeStyles, withStyles } from "@material-ui/core/styles";
-
-import "../../../assets/css/styles.css";
-import 'react-image-lightbox/style.css';
 
 import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
@@ -24,7 +23,6 @@ import Info from "../../../components/Typography/Info.js";
 import Card from "../../../components/Card/Card.js";
 import CardHeader from "../../../components/Card/CardHeader.js";
 
-
 // my images and icons
 import operationSpark from "../../../assets/img/assorted/OPSparkLogo.png";
 import Crawl from "../../../assets/img/assorted/Crawl.jpg";
@@ -32,7 +30,6 @@ import crawlCrop from "../../../assets/img/showcase/crawlCrop.png";
 import crawlLogo from "../../../assets/img/showcase/crawlLogo.png";
 import OPHomepage from "../../../assets/img/assorted/OP-homepage.jpg";
 import OPLogoMed from "../../../assets/img/assorted/OP-logoMed.jpg";
-import lrnLogo from "../../../assets/img/showcase/learningResourcesNowLogo.png";
 import lrnLogoCropOne from "../../../assets/img/showcase/lrnLogoCropOne.png";
 import lrnImageOne from "../../../assets/img/showcase/lrnShowcaseOne.jpg";
 import lrnImageTwo from "../../../assets/img/showcase/lrnShowcaseTwo.jpg";
@@ -71,10 +68,7 @@ const images = [
   },
 ];
 
-const certificationImages = [
-  OperationSparkCert,
-]
-
+const certImages = [OperationSparkCert];
 
 const dStyles = (theme) => ({
   root: {
@@ -164,34 +158,37 @@ export default function OperationSpark() {
       <br />
       <br />
       <GridContainer justify="center">
-      <GridItem xs={12} sm={4} md={4}>
+        <GridItem xs={12} sm={4} md={4}>
           <CardHeader image plain>
-            <div type="button" className={blogClasses.mag} onClick={() => {
-              setCertOpen(true);
-              console.log('test');
-              }}>
-            <img src={OperationSparkCert} alt="..." />
-        </div>
+            <div
+              type="button"
+              className={blogClasses.mag}
+              onClick={() => {
+                setCertOpen(true);
+                console.log("test");
+              }}
+            >
+              <img src={certImages[0]} alt="..." />
+            </div>
             <div
               className={blogClasses.coloredShadow}
               style={{
-                backgroundImage: `url(${OperationSparkCert})`,
+                backgroundImage: `url(${certImages[0]})`,
                 opacity: "1",
               }}
             />
           </CardHeader>
-
           // this will be the lightbox that will open if the cert is clicked
           {certOpen && (
-          <Lightbox
-            mainSrc={OperationSparkCert}
-            imagePadding={500}
-            onCloseRequest={() => setCertOpen(false)}
-          />
-        )}
-        <br />
-        <br />
-        <br />
+            <Lightbox
+              mainSrc={certImages[0]}
+              imagePadding={500}
+              onCloseRequest={() => setCertOpen(false)}
+            />
+          )}
+          <br />
+          <br />
+          <br />
         </GridItem>
         <GridItem xs={12} sm={12} md={16}>
           <img alt=".." src={operationSpark} />
