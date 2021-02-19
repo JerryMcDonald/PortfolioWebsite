@@ -1,70 +1,53 @@
 import React from "react";
-// import Carousel from "react-slick";
+import Lightbox from "react-image-lightbox";
+
+import "react-image-lightbox/style.css";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 import "../../../assets/css/styles.css";
 
 // material-ui components
-import Code from "@material-ui/icons/Code";
-import Group from "@material-ui/icons/Group";
 import Divider from "@material-ui/core/Divider";
-import Ballot from "@material-ui/icons/Ballot";
-import Flare from "@material-ui/icons/Flare";
-
-// import MuiDialogTitle from "@material-ui/core/DialogTitle";
-// import IconButton from "@material-ui/core/IconButton";
-// import CloseIcon from "@material-ui/icons/Close";
-// import Typography from "@material-ui/core/Typography";
-// import FormatPaint from "@material-ui/icons/FormatPaint";
-// import Dashboard from "@material-ui/icons/Dashboard";
-// import Timeline from "@material-ui/icons/Timeline";
 
 // components
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Card from "../../../components/Card/Card.js";
-import CardBody from "../../../components/Card/CardBody.js";
-import Badge from "../../../components/Badge/Badge.js";
-import InfoArea from "../../../components/InfoArea/InfoArea.js";
 
 import CardHeader from "../../../components/Card/CardHeader.js";
 import Quote from "../../../components/Typography/Quote.js";
 
-// images and icons
-// import CppCert from "../../../assets/img/creds/CodecademyCert.jpg";
-// import CppBlogBannerOne from "../../../assets/img/blog/CppBlogBannerOne.png";
-// import CppBlogBannerTwo from "../../../assets/img/blog/CppBlogBannerTwo.png";
+// Games
+// import MemoryMatchButton from "./JavascriptGames/MemoryMatch/MemoryMatchButton.js";
+
 import jsBlogBannerOne from "../../../assets/img/blog/jsBlogBannerOne.jpg";
 import jsBlogBannerTwo from "../../../assets/img/blog/jsBlogBannerTwo.jpg";
 
 import JsCert from "../../../assets/img/creds/JS-Cert-basic.jpg";
 import JsBadge from "../../../assets/img/creds/JS-badge-complete.png";
 import JqBadge from "../../../assets/img/creds/JQ-badge-complete.png";
-import OOYAone from "../../../assets/img/projects/ooyaGifOne.webp";
-import RPSLS from "../../../assets/img/projects/RPSLS.webp";
-import ticTacToe from "../../../assets/img/projects/Tic-tac-toe-animated.gif";
 
-// import styles from "../../../assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
-// import breakawayStyles from "../../../assets/jss/material-kit-react/views/componentsSections/breakawayStyle.js";
-// import showcaseStyles from "../../../assets/jss/material-kit-react/views/profilePage.js";
-// import carouselStyle from "../../../assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
-// import typoStyles from "../../../assets/jss/material-kit-react/views/componentsSections/typographyStyle.js";
 import blogsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/blogsStyle.js";
-import projectsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
+// import projectsStyle from "../../../assets/jss/material-kit-pro-react/views/sectionsSections/projectsStyle.js";
 
 // const useStyles = makeStyles(blogsStyle);
 // const useShowcaseStyles = makeStyles(showcaseStyles);
 // const useTypoStyles = makeStyles(typoStyles);
 // const useCarouselStyles = makeStyles(carouselStyle);
+// const useProjectsStyles = makeStyles(projectsStyle);
 const useStyles = makeStyles(blogsStyle);
-const useProjectsStyles = makeStyles(projectsStyle);
+
+const certImages = [JsBadge, JsCert, JqBadge];
 
 export default function Javascript() {
+  const [photoIndex, setPhotoIndex] = React.useState(0);
+  const [certOpen, setCertOpen] = React.useState(false);
+
   // const typoClasses = useTypoStyles();
   // const carouselClasses = useCarouselStyles();
+  // const projectClasses = useProjectsStyles();
   const classes = useStyles();
-  const projectClasses = useProjectsStyles();
 
   return (
     <div>
@@ -72,46 +55,87 @@ export default function Javascript() {
       <GridContainer justify="center">
         <GridItem xs={12} sm={4} md={4}>
           <CardHeader image plain>
-            <img src={JsBadge} alt="..." />
-
+            <div
+              type="button"
+              className={classes.mag}
+              onClick={() => {
+                setPhotoIndex(0);
+                setCertOpen(true);
+              }}
+            >
+              <img src={certImages[0]} alt="..." />
+            </div>
             <div
               className={classes.coloredShadow}
               style={{
-                backgroundImage: `url(${JsCert})`,
+                backgroundImage: `url(${certImages[0]})`,
                 opacity: "1",
               }}
             />
           </CardHeader>
-          
         </GridItem>
         <GridItem xs={12} sm={4} md={4}>
           <CardHeader image plain>
-            <img src={JsCert} alt="..." />
-
+            <div
+              type="button"
+              className={classes.mag}
+              onClick={() => {
+                setPhotoIndex(1);
+                setCertOpen(true);
+              }}
+            >
+              <img src={certImages[1]} alt="..." />
+            </div>
             <div
               className={classes.coloredShadow}
               style={{
-                backgroundImage: `url(${JsCert})`,
+                backgroundImage: `url(${certImages[1]})`,
                 opacity: "1",
               }}
             />
           </CardHeader>
-          
         </GridItem>
         <GridItem xs={12} sm={4} md={4}>
           <CardHeader image plain>
-            <img src={JqBadge} alt="..." />
-
+            <div
+              type="button"
+              className={classes.mag}
+              onClick={() => {
+                setPhotoIndex(2);
+                setCertOpen(true);
+              }}
+            >
+              <img src={certImages[2]} alt="..." />
+            </div>
             <div
               className={classes.coloredShadow}
               style={{
-                backgroundImage: `url(${JsCert})`,
+                backgroundImage: `url(${certImages[2]})`,
                 opacity: "1",
               }}
             />
           </CardHeader>
-          
         </GridItem>
+        {certOpen && (
+          <Lightbox
+            mainSrc={certImages[photoIndex]}
+            nextSrc={certImages[(photoIndex + 1) % certImages.length]}
+            prevSrc={
+              certImages[
+                (photoIndex + certImages.length - 1) % certImages.length
+              ]
+            }
+            onCloseRequest={() => setCertOpen(false)}
+            onMovePrevRequest={() =>
+              setPhotoIndex(
+                (photoIndex + certImages.length - 1) % certImages.length
+              )
+            }
+            onMoveNextRequest={() =>
+              setPhotoIndex((photoIndex + 1) % certImages.length)
+            }
+          />
+        )}
       </GridContainer>
       <br />
       <br />
@@ -125,7 +149,9 @@ export default function Javascript() {
           />
         </GridItem>
       </GridContainer>
-      <hr />
+      {/* <hr />
+        <MemoryMatchButton />
+      <hr /> */}
       {/* Blogs START */}
       <div className={classes.blog}>
         <div className={classes.container}>
@@ -246,156 +272,6 @@ export default function Javascript() {
       </div>
       {/* Blogs END */}
       <hr />
-      {/* Project START */}
-      {/* <div className={projectClasses.projects + " " + projectClasses.projects4}>
-        <div className={projectClasses.container}>
-          <GridContainer>
-            <GridItem
-              xs={12}
-              sm={8}
-              md={8}
-              className={
-                projectClasses.mlAuto +
-                " " +
-                projectClasses.mrAuto +
-                " " +
-                projectClasses.textCenter
-              }
-            >
-              <h2 className={projectClasses.title}>C++ Applicaitons</h2>
-              <h5 className={projectClasses.description}>
-                This is the paragraph where you can write more details about
-                your projects. Keep you user engaged by providing meaningful
-                information.
-              </h5>
-              <div className={projectClasses.sectionSpace} />
-            </GridItem>
-          </GridContainer>
-          <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
-              <Card
-                background
-                className={projectClasses.card4}
-                style={{ backgroundImage: `url(${OOYAone})` }}
-              >
-                <CardBody background className={projectClasses.cardBody4}>
-                  <br />
-                  <br />
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/OOYA"
-                  >
-                    <Badge color="primary">View Repo</Badge>
-                  </a>
-                  <h3 className={projectClasses.cardTitle}>
-                    The Object Of Your Affection
-                  </h3>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
-              <InfoArea
-                className={projectClasses.info4}
-                title="Summary"
-                description="A well-organized system of dating profiles built with C++ Objects and Classes allows users to view and create profile cards."
-                icon={Ballot}
-                iconColor="primary"
-              />
-              <InfoArea
-                className={projectClasses.info4}
-                title="Key Concepts"
-                description="A C++ constructor to instantiate new profile objects and C++ Vectors allows for organized user hobbies that can be modified."
-                icon={Code}
-                iconColor="danger"
-              />
-            </GridItem>
-          </GridContainer>
-          <hr />
-          <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
-              <InfoArea
-                className={projectClasses.info4}
-                title="Summary"
-                description="A Traditional 2-player tic-tac-toe game on a 3x3 grid in the terminal."
-                icon={Ballot}
-                iconColor="success"
-              />
-              <InfoArea
-                className={projectClasses.info4}
-                title="Key Concepts"
-                description="Makes excellent use of a header file to organize function declarations and uses C++ logic and conditionals to determine a winner."
-                icon={Code}
-                iconColor="info"
-              />
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
-            <Card
-                background
-                className={projectClasses.card4}
-                style={{ backgroundImage: `url(${ticTacToe})` }}
-              >
-                <CardBody background className={projectClasses.cardBody4}>
-                  <br />
-                  <br />
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/TTT"
-                  >
-                    <Badge color="primary">View Repo</Badge>
-                  </a>
-                  <h3 className={projectClasses.cardTitle}>
-                    The Object Of Your Affection
-                  </h3>
-                </CardBody>
-              </Card>
-            </GridItem>
-          </GridContainer>
-          <hr />
-          <GridContainer>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mlAuto}>
-              <Card
-                background
-                className={projectClasses.card4}
-                style={{ backgroundImage: `url(${RPSLS})` }}
-              >
-                <CardBody background className={projectClasses.cardBody4}>
-                  <br />
-                  <br />
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href="https://github.com/JerryMcDonald/cpp-projects/tree/master/RPSLS"
-                  >
-                    <Badge color="primary">View Repo</Badge>
-                  </a>
-                  <h3 className={projectClasses.cardTitle}>
-                    The Object Of Your Affection
-                  </h3>
-                </CardBody>
-              </Card>
-            </GridItem>
-            <GridItem xs={12} sm={5} md={5} className={projectClasses.mrAuto}>
-              <InfoArea
-                className={projectClasses.info4}
-                title="Summary"
-                description="Sheldons favorite way handle a dispute"
-                icon={Flare}
-                iconColor="primary"
-              />
-              <InfoArea
-                className={projectClasses.info4}
-                title="Key Concepts"
-                description="I use the computer's internal clock to create a seed for the random number generator algorithm, allowing for code to generate a random response. "
-                icon={Code}
-                iconColor="danger"
-              />
-            </GridItem>
-          </GridContainer>
-        </div>
-      </div> */}
-      {/* Projects END */}
       <Divider variant="middle" />
     </div>
   );
