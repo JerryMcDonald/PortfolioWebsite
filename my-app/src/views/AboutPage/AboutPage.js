@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -35,6 +35,9 @@ import Sequelize from "../../assets/img/icons/Sequelize.png";
 import GCloud from "../../assets/img/icons/GCloud.png";
 import Cpp from "../../assets/img/icons/C++_Icon.png";
 import dotNetCore from "../../assets/img/icons/dotNetCore.png";
+import CSharp from "../../assets/img/icons/CSharp.png";
+import gitHub from "../../assets/img/icons/gitHub.png";
+
 
 import styles from "../../assets/jss/material-kit-react/views/profilePage.js";
 
@@ -62,10 +65,13 @@ export default function AboutPage(props) {
   return (
     <div>
       <Helmet>
-                <meta charSet="utf-8" />
-                <title>My Title</title>
-                <meta property="og:url" content="https://www.jerrymcdonald.dev/#/aboutme-page"></meta>
-                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        <meta charSet="utf-8" />
+        <title>My Title</title>
+        <meta
+          property="og:url"
+          content="https://www.jerrymcdonald.dev/#/aboutme-page"
+        ></meta>
+        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
       </Helmet>
       <Header
         color="transparent"
@@ -92,11 +98,11 @@ export default function AboutPage(props) {
                   {/* <div>
                     <img src={profile} alt="..." className={imageClasses} />
                   </div> */}
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
 
                   <div className={classes.name}>
                     <h3 className={classes.title}>Jerry McDonald</h3>
@@ -167,6 +173,13 @@ export default function AboutPage(props) {
                   src={nodejs}
                   title="NodeJS"
                 />
+
+                <Avatar
+                  variant="square"
+                  className={classes.square}
+                  src={CSharp}
+                  title="C#"
+                />
               </div>
             </GridContainer>
             <GridContainer justify="center">
@@ -218,6 +231,13 @@ export default function AboutPage(props) {
                   className={classes.square}
                   src={GCloud}
                   title="Google Cloud"
+                />
+
+                <Avatar
+                  variant="square"
+                  className={classes.square}
+                  src={gitHub}
+                  title="github"
                 />
               </div>
             </GridContainer>
