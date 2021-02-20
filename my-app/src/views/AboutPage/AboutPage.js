@@ -1,6 +1,7 @@
 import React from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
+import {Helmet} from "react-helmet";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
@@ -11,15 +12,14 @@ import Avatar from "@material-ui/core/Avatar";
 // import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "../../components/Header/Header.js";
-import Footer from "../../components/Footer/Footer.js";
-import Button from "../../components/CustomButtons/Button.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import HeaderLinks from "../../components/Header/HeaderLinks.js";
-import NavPills from "../../components/NavPills/NavPills.js";
 import Parallax from "../../components/Parallax/Parallax.js";
+import Footer from "../../components/Footer/Footer.js";
 
 import profile from "../../assets/img/assorted/avatar-jerry.jpg";
+import meta from "../../assets/img/metaImages/newMainPageMetaImage.png";
 
 import js from "../../assets/img/icons/JS.png";
 import react from "../../assets/img/icons/React.png";
@@ -33,20 +33,8 @@ import ExpressJS from "../../assets/img/icons/Express JS.png";
 import mongoDB from "../../assets/img/icons/mongoDB.png";
 import Sequelize from "../../assets/img/icons/Sequelize.png";
 import GCloud from "../../assets/img/icons/GCloud.png";
-import CSharp from "../../assets/img/icons/CSharp.png";
 import Cpp from "../../assets/img/icons/C++_Icon.png";
 import dotNetCore from "../../assets/img/icons/dotNetCore.png";
-
-import studio1 from "../../assets/img/examples/studio-1.jpg";
-import studio2 from "../../assets/img/examples/studio-2.jpg";
-import studio3 from "../../assets/img/examples/studio-3.jpg";
-import studio4 from "../../assets/img/examples/studio-4.jpg";
-import studio5 from "../../assets/img/examples/studio-5.jpg";
-import work1 from "../../assets/img/examples/olu-eletu.jpg";
-import work2 from "../../assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "../../assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "../../assets/img/examples/mariya-georgieva.jpg";
-import work5 from "../../assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "../../assets/jss/material-kit-react/views/profilePage.js";
 
@@ -71,9 +59,14 @@ export default function AboutPage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
-  const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>My Title</title>
+                <meta property="og:url" content="https://www.jerrymcdonald.dev/#/aboutme-page"></meta>
+                {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+      </Helmet>
       <Header
         color="transparent"
         brand="Jerry McDonald"
@@ -96,9 +89,15 @@ export default function AboutPage(props) {
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
-                  <div>
+                  {/* <div>
                     <img src={profile} alt="..." className={imageClasses} />
-                  </div>
+                  </div> */}
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+
                   <div className={classes.name}>
                     <h3 className={classes.title}>Jerry McDonald</h3>
                     <h6>Programmer</h6>
