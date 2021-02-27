@@ -13,6 +13,7 @@ import "./assets/scss/material-kit-react.scss?v=1.9.0";
 import Contact from "./views/ContactPage/ContactPage.js";
 import About from "./views/AboutPage/AboutPage.js";
 import Images from "./views/ImagesPage/ImagesPage.js";
+import ASBlog from "./views/BlogPosts/AppliedSystems/AppliedSystemsBlogPost.js";
 
 // import Resume from "./views/ResumePage/ResumePage.js";
 import HomePage from "./views/HomePage/HomePage.js";
@@ -24,6 +25,7 @@ ReactDOM.render(
     <Switch>
       {/* <Route path="/landing-page" component={LandingPage} /> */}
       <Route exact path="/aboutme-page" component={About} />
+      <Route exact path="/appliedsystems" component={ASBlog} />
       {/* <Route path="/login-page" component={LoginPage} /> */}
       {/* <Route path="/resume-page" component={Resume} /> */}
       <Route exact path="/contact-page" component={Contact} />
