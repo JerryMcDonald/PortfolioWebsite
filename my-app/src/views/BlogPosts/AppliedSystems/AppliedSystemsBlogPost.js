@@ -1,7 +1,8 @@
-
 import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
+import classNames from "classnames";
+
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -18,9 +19,11 @@ import Footer from "../../../components/Footer/Footer.js";
 import GridContainer from "../../../components/Grid/GridContainer.js";
 import GridItem from "../../../components/Grid/GridItem.js";
 import Button from "../../../components/CustomButtons/Button.js";
+import ASIcon from "../../../assets/img/blog/ASICON.webp";
+import w3c from "../../../assets/img/blog/w3c.png";
 
 // sections for this page
-// import SectionText from "./AppliedSystemsSectionText.js";
+import SectionText from "./AppliedSystemsSectionText.js";
 
 import blogPostPageStyle from "../../../assets/jss/material-kit-pro-react/views/blogPostPageStyle.js";
 
@@ -32,40 +35,53 @@ export default function ASBlog() {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+
+  const imageClasses = classNames(
+    classes.imgRaised,
+    classes.imgRoundedCircle,
+    classes.imgFluid
+  );
+
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
         color="transparent"
+        brand="Jerry McDonald"
+        rightLinks={<HeaderLinks />}
+        fixed
         changeColorOnScroll={{
-          height: 300,
-          color: "info"
+          height: 200,
+          color: "white",
         }}
       />
-      <Parallax image={require("../../../assets/img/blog/ASBlogImage.jpg")} filter="dark">
+      <Parallax
+        image={require("../../../assets/img/blog/ASBlogImage.jpg")}
+        filter="dark"
+      >
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem md={8} className={classes.textCenter}>
-              <h1 className={classes.title}>
-                How We Built the Most Successful Castle Ever
-              </h1>
-              <h4 className={classes.subtitle}>
-                The last 48 hours of my life were total madness. This is what I
-                did.
-              </h4>
+              <h1 className={classes.title}>Hello Applied Systems!</h1>
+              <h4 className={classes.subtitle}></h4>
               <br />
-              <Button color="rose" size="lg" round>
-                <FormatAlignLeft /> Read Article
-              </Button>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classes.main}>
         <div className={classes.container}>
-          {/* <SectionText /> */}
+          <GridContainer justify="center">
+            <GridItem xs={12} sm={12} md={6}>
+              <div className={classes.profile}>
+                <div>
+                  <img src={ASIcon} alt="..." className={imageClasses} />
+                </div>
+                <br />
+              </div>
+            </GridItem>
+          </GridContainer>
+          {/* <img src={w3c} alt="..." className={imageClasses} /> */}
+          <SectionText />
         </div>
       </div>
       <Footer
