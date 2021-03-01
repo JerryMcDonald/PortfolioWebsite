@@ -51,6 +51,18 @@ export default function HeaderLinks(props) {
            about
         </Button>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          // href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href={"/#/appliedsystems"}
+          // onClick={props.aboutClick}
+          color="transparent"
+          // target="_blank"
+          className={classes.navLink}
+        >
+           blog (Applied Systems)
+        </Button>
+      </ListItem>
       {/* <ListItem className={classes.listItem}>
         <Button
           // href={"/contact-page"}
