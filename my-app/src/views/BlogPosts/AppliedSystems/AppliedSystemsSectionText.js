@@ -277,6 +277,12 @@ export default function SectionText() {
               Here is a link to the code on GitHub for this blog. I am using the React Framework in combination with Material-UI.
           `}
           </p>
+          <a id="link" href="https://github.com/JerryMcDonald/PortfolioWebsite/tree/main/my-app/src/views/BlogPosts/AppliedSystems">
+            <u>Blog page Repository</u>
+          </a>
+          <br />
+          <br />
+          <br />
         </GridItem>
       </GridContainer>
     </div>
