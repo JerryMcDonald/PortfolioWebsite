@@ -6,6 +6,9 @@ import {
   mainRaised
 } from "../../material-kit-pro-react.js"
 
+import imagesStyle from "../../material-kit-react/imagesStyles.js";
+
+
 const blogPostPageStyle = {
   container: {
     ...container,
@@ -14,6 +17,7 @@ const blogPostPageStyle = {
   textCenter: {
     textAlign: "center"
   },
+  ...imagesStyle,
   title: {
     ...title,
     color: whiteColor
@@ -60,7 +64,16 @@ const blogPostPageStyle = {
     height: "18px",
     top: "3px",
     position: "relative"
-  }
+  },
+  profile: {
+    textAlign: "center",
+    "& img": {
+      maxWidth: "160px",
+      width: "100%",
+      margin: "0 auto",
+      transform: "translate3d(0, -50%, 0)"
+    }
+  },
 };
 
 export default blogPostPageStyle;
