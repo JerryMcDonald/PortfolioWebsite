@@ -38,7 +38,6 @@ import dotNetCore from "../../assets/img/icons/dotNetCore.png";
 import CSharp from "../../assets/img/icons/CSharp.png";
 import gitHub from "../../assets/img/icons/gitHub.png";
 
-
 import styles from "../../assets/jss/material-kit-react/views/profilePage.js";
 
 const useStyles = makeStyles(styles);
