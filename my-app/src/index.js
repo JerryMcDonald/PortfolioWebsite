@@ -14,6 +14,7 @@ import Contact from "./views/ContactPage/ContactPage.js";
 import About from "./views/AboutPage/AboutPage.js";
 import Images from "./views/ImagesPage/ImagesPage.js";
 import ASBlog from "./views/BlogPosts/AppliedSystems/AppliedSystemsBlogPost.js";
+import Schedule from "./views/SchedulePage/SchedulePage.js";
 
 // import Resume from "./views/ResumePage/ResumePage.js";
 import HomePage from "./views/HomePage/HomePage.js";
@@ -26,7 +27,7 @@ ReactDOM.render(
       {/* <Route path="/landing-page" component={LandingPage} /> */}
       <Route exact path="/aboutme-page" component={About} />
       <Route exact path="/appliedsystems" component={ASBlog} />
-      {/* <Route path="/login-page" component={LoginPage} /> */}
+      <Route path="/schedule-page" component={Schedule} />
       {/* <Route path="/resume-page" component={Resume} /> */}
       <Route exact path="/contact-page" component={Contact} />
       {/* <Route path="/wtf/page" components={HomePage} /> */}
